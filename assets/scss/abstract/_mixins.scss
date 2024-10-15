@@ -1,0 +1,164 @@
+@use "./fonts" as *;
+@use "./colors" as *;
+
+@mixin background-cover{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+
+@mixin flex-cloumn{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-vertical{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horizontal{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-space-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin center-through-position{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+@mixin relative-hidden {
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin full-dimensions{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin dimensions($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin pseudo-cover{
+    content:"";
+    position: absolute;
+    inset:0;
+}
+
+@mixin border-radius($val){
+    border-radius:$val;
+}
+
+@mixin transition($property:all, $delay:0, $timing-func:ease){
+    transition:$property $delay $timing-func;
+}
+
+@mixin transform($transforms) {
+    transform: $transforms;
+}
+
+@mixin animation($animation-name, $duration, $timing-function, $direction){
+    animation:$animation-name $duration $timing-function $direction;
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+      @content;
+    }
+}
+
+// ======== setting font for header and body ======= //
+@mixin font-heading{
+    font-family: $ff-primary;
+    color: $clr-black;
+    text-transform: capitalize;
+}
+
+@mixin font-body{
+    font-family:$ff-secondary;
+    color:$clr-black;
+    line-height: 1.33;
+}
+
+@mixin grid-tc($column-number, $fraction){
+    grid-template-columns: repeat($column-number, $fraction);
+}
+
+
+@mixin link-hover-effect($main-clr:$clr-black, $hover-clr:$clr-secondary){
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom, $hover-clr, $hover-clr 50%, $main-clr 50%);
+    background-position: 0 -100%;
+    background-size: 100% 200%;
+    transition: background-position .3s ease;
+}
+
+@mixin hover-effect($bg-color:$clr-secondary) {
+    &::before{
+        content:"";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include full-dimensions;
+        background:$bg-color;
+        z-index: -1;
+        transform: translateY(100%);
+        transition: transform 0.25s ease-out;
+        transform-origin: bottom;
+    }
+}
+
+
+@mixin caret-down{
+    content:"";
+    position: absolute;
+    right: 1rem;
+    top: 55%;
+    pointer-events: none;
+    border-left: 0.35rem solid transparent;
+    border-right: 0.35rem  solid transparent;
+    border-top: 0.35rem solid $clr-black;
+    pointer-events: none;
+}
+
+
+@mixin rippel-animation{
+    &::before{
+        content: "";
+        position: absolute;
+        @include full-dimensions;
+        @include border-radius(50%);
+        background-color: inherit;
+        z-index: -1;
+        animation: ripple-play-btn 1.5s ease-out infinite;
+    }
+    @keyframes ripple-play-btn {
+        0% {
+            opacity: 1;
+            transform: scale(0);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.8);
+        }
+    }
+}

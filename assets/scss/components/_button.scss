@@ -1,0 +1,191 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.btn{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    outline:none;
+    border:none;
+    color:$clr-black;
+    font-family: $ff-secondary;
+    font-size:rem(20);
+    line-height: 1.2;
+    padding:em(14) em(28);
+    @include border-radius(16px);
+    @include transition(all, 0.3s, ease);
+    z-index: 1;
+   
+    span{
+        color:$clr-black;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+.btn--primary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $clr-secondary;
+    border: 2px solid $clr-black;
+    gap:rem(16);
+    span{
+        color:$clr-black;
+    }
+}
+
+
+.btn--outline{
+    border: 1px solid $clr-black;
+    background: $clr-white;
+    transition: all 0.3s ease;
+    span{
+        color:$clr-black;
+    }
+    &:hover{
+        border-color:$clr-secondary;
+        span{
+            color:$clr-white;
+        }
+    }
+}
+
+
+.btn--transparent{
+    display: inline-flex;
+    background:transparent;
+    @include flex-center-vertical;
+    gap:rem(12);
+    padding: 0;
+
+    span{
+        color:$clr-secondary;
+        text-decoration: underline;
+        text-decoration-color: $clr-secondary;        
+        -moz-text-decoration-color: $clr-secondary;    
+    }
+    &:hover{
+        span{
+            color:$clr-black;
+            text-decoration-color: $clr-black;    
+        }
+    }
+}
+
+
+// .bg-colored{
+//     .btn--transparent{
+//         span{
+//             @include link-hover-effect($clr-white, $clr-secondary);
+//             text-decoration-color:$clr-white;
+//         }
+//         &:hover{
+//             span{
+//                 background-position: 0 0;
+//                 text-decoration-color:$clr-secondary;
+//             }
+//         }
+//     }
+// }
+
+// .btn--prev,
+// .btn--next{
+//     position: relative;
+//     @include border-radius(50%);
+//     @include flex-center;
+//     padding: em(8);
+//     flex-shrink: 0;
+//     z-index:2;
+   
+//     @include breakpoint-sm{
+//         padding: em(10);
+//         top: -3rem;
+//     }
+//     @include breakpoint-md{
+//         padding: em(12);
+//     }
+//     @include breakpoint-lg{
+//         padding: em(14);
+//     }
+//     @include breakpoint-xl{
+//         padding: em(16);
+//     }
+//     @include breakpoint-xxl{
+//         padding: em(18);
+//         top: 0;
+//     }
+//     @include breakpoint-xxxl{
+//         padding: em(20);
+//     }
+//     &:hover{
+//         background: $clr-secondary;
+//         svg path{
+//             fill: $clr-white;
+//         }
+//     }
+// }
+
+// ======= Play Button =======
+.play-btn-wrapper{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: rem(144);
+    margin-bottom: rem(80);
+    text-align: center;
+}
+
+.play-btn{
+    position: relative;
+    @include flex-center;
+    @include dimensions(rem(64), rem(64));
+    @include border-radius(50%);
+    background-color: $clr-secondary;
+    opacity: 0.9;
+    z-index: 1;
+    transition:all 0.35s ease;
+    @include breakpoint-sm{
+        @include dimensions(rem(80), rem(80));
+    }
+    @include breakpoint-lg{
+        @include dimensions(rem(96), rem(96));
+    }
+    @include breakpoint-xxl{
+        @include dimensions(rem(110), rem(110));
+    }
+    svg{
+        @include dimensions(rem(26), rem(26));
+        @include breakpoint-sm{
+            @include dimensions(rem(32), rem(32));
+        }
+        path{
+            fill:$clr-black;
+        }
+    }
+    @include rippel-animation;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+        background-color: $clr-primary;
+    }
+}
+
+
+// .submit-btn{
+//     @include flex-center;
+//     @include dimensions(rem(36), rem(36));
+//     background: $clr-secondary;
+//     transition:all 0.3s ease;
+//     &:hover{
+//         background: $clr-primary;
+//         @include border-radius(50%);
+//     }
+// }

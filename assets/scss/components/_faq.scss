@@ -1,0 +1,113 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+// ===== Accordion ======
+.accordion{
+    &__container{
+        display: flex;
+        padding-block: em(24);
+        gap:rem(6);
+        @include breakpoint-sm{
+            padding-block: em(32);
+            gap:rem(10);
+        }
+        @include breakpoint-md{
+            padding-right: 1rem;
+            gap:1rem(16);
+        }
+        @include breakpoint-md{
+            padding-right: 2rem;
+        }
+    }
+    &__title-wrapper{
+        position: relative;
+        display: flex;
+        &::after{
+            content: url("../assets/icons/arrow-down.svg");
+            position: absolute;
+            flex-shrink: 0;
+            right: 0;
+            transition:transform 0.25s ease;
+            transform: translateY(0) rotate(0deg);
+            transform-origin: center;
+            @include dimensions(rem(42), rem(26));
+            background: $clr-secondary;
+            @include flex-center;
+        }
+    }
+    &__title{
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        gap:rem(16);
+        @include transition(all, 0.25s, ease);
+        max-width: 85%;
+        @include link-hover-effect($clr-black, $clr-secondary);
+    }
+    &__icon-wrapper{
+        span{
+            display: flex;
+            @include transition(all, 0.25s, ease);
+        }
+    }
+    &__content{
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.35s ease;
+        max-width: min(100%, 84ch);
+        text-align: left;
+    }
+}
+
+
+.accordion__title-wrapper{
+    &.active{
+        &::after{
+            transform: translateY(6px) rotate(180deg);
+        }
+        .accordion__title{
+            background-position: 0 0;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        .accordion__icon-wrapper{
+            span{
+                svg{
+                    path{
+                        fill:$clr-secondary;
+                    }
+                }
+            }
+        }
+        .accordion__title{
+            background-position: 0 0;
+        }
+    }
+}
+
+.faqs-title-wrapper{
+    background-color: $clr-tertiary;
+    padding: em(16) em(24);
+    align-items: center;
+    &::after{
+        right: rem(24);
+    }
+    .accordion__title{
+        @include link-hover-effect($clr-white, $clr-secondary);
+    }
+    & + .accordion__content{
+        padding-left: em(24);
+    }
+}
+
+.faqs-section-header{
+    max-width: 76ch;
+    margin-inline: auto;
+}

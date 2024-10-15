@@ -1,0 +1,61 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.swiper-testimonials{
+    @include breakpoint-sm{
+        @include flex-center;
+    }
+    @include breakpoint-lg{
+        gap:1rem;
+    }
+    @include breakpoint-xxl{
+        gap:5rem;
+    }
+    @include breakpoint-xxxl{
+        gap:10rem;
+    }
+}
+
+.swiper-wrapper{
+    width: min(100%, rem(1160));
+    margin-inline:auto;
+    @include breakpoint-sm{
+        width: min(75%, rem(1160));
+    }
+    @include breakpoint-lg{
+        width: min(70%, rem(1160));
+    }
+}
+
+.swiper-button-disabled{
+    opacity: 0.8;
+    background: $clr-secondary;
+    border-color:$clr-secondary;
+    svg path{
+        fill: $clr-white;
+    }
+}
+
+.swiper-pagination-current,
+.swiper-pagination-total{
+    position: relative;
+    &:before{
+        content:"0";
+        color:$clr-black;
+    }
+}
+
+.swiper-pagination-fraction{
+    position: absolute;
+    top: -47px;
+    left: 80%;
+    z-index: -1;
+}
+
+.swiper-pagination{
+    text-align: left;
+}

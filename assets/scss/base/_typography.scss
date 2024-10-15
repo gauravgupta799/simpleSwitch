@@ -1,0 +1,165 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/colors" as *;
+
+// Breakpoint values for min-width operators.
+$breakpoints: (
+  sm: em(576),
+  md: em(768),
+  lg: em(992),
+  xl: em(1200),
+  xxl:em(1600),
+  xxxl:em(1920),
+);
+
+
+// Null is mobile, no breakpoint.
+$p-font-sizes: (
+  null:(rem(18), rem(24)), // Font sizes and line height 
+  sm: (rem(18), rem(24)),
+  md: (rem(18), rem(24)),
+  lg: (rem(18), rem(24)),
+  xl: (rem(18), rem(24)),
+  xxl:(rem(18), rem(24)), 
+);
+
+
+$h1-font-sizes: (
+  null: (rem(44), rem(48)),   
+  sm: (rem(48), rem(52)),
+  md: (rem(54), rem(58)),
+  lg: (rem(60), rem(64)),
+  xl: (rem(64), rem(68)),
+  xxl: (rem(68), rem(72)),
+  xxxl: (rem(72), rem(76)),
+);
+
+$h2-font-sizes:(
+  null:(rem(28), rem(32)), 
+  sm:(rem(28), rem(32)),
+  md:(rem(32), rem(36)),
+  lg:(rem(36), rem(40)), 
+  xl:(rem(40), rem(48)), 
+  xxl:(rem(44), rem(48)),
+  xxxl:(rem(48), rem(52)),
+);
+
+$h3-font-sizes: (
+  null:(rem(22), rem(30)), 
+  sm:(rem(22), rem(30)),
+  md:(rem(24), rem(32)),
+  lg:(rem(24), rem(32)),
+  xl:(rem(26), rem(34)),
+  xxl:(rem(28), rem(36)),
+  xxxl:(rem(28), rem(36)),
+);
+
+$h4-font-sizes: (
+  null:(rem(24), rem(32)), 
+  sm :(rem(26), rem(36)),
+  md :(rem(28), rem(40)),
+  lg :(rem(32), rem(44)),
+  xl :(rem(36), rem(50)),
+  xxl :(rem(38), rem(56)),
+  xxxl :(rem(40), rem(56)),
+);
+
+$h5-font-sizes: (
+  null:(rem(22), rem(29)), 
+  sm :(rem(22), rem(29)),
+  md :(rem(24), rem(31)),
+  lg :(rem(24), rem(31)),
+  xl :(rem(26), rem(34)),
+  xxl:(rem(26), rem(34)),
+  xxxl:(rem(28), rem(36)),
+); 
+
+
+$h6-font-sizes: (
+  null: (rem(20), rem(24)),
+  sm : (rem(20), rem(24)),
+  md : (rem(22), rem(26)),
+  lg : (rem(22), rem(26)),
+  xl:  (rem(22), rem(28)),
+  xxl: (rem(24), rem(28)),
+); 
+
+
+@mixin font-size($fs-map, $fs-breakpoints:$breakpoints){
+    @each $fs-breakpoint, $fs-font-size in $fs-map{
+        @if $fs-breakpoint == null{
+            @include make-font-size($fs-font-size);
+        }
+        @else{
+            @if map-has-key($fs-breakpoints, $fs-breakpoint){
+                $fs-breakpoint:map-get($fs-breakpoints, $fs-breakpoint);
+            }
+            @media screen and (min-width:$fs-breakpoint){
+                @include make-font-size($fs-font-size);
+            }
+        }
+    }
+}
+
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size){
+    @if type-of($fs-font-size) == "list" {
+        font-size:nth($fs-font-size, 1);
+        @if (length($fs-font-size) > 1){
+            line-height: nth($fs-font-size, 2);
+        }
+    }
+    @else{
+        font-size: $fs-font-size;
+    }
+}
+
+
+// ======== adding both font size and font-family mixins====
+h1{
+    @include font-size($h1-font-sizes);
+}
+h2{
+    @include font-size($h2-font-sizes);
+}
+h3{
+    @include font-size($h3-font-sizes);
+}
+h4{
+    @include font-size($h4-font-sizes);
+}
+h5{
+    @include font-size($h5-font-sizes);
+}
+h6{
+    @include font-size($h6-font-sizes);
+}
+
+h1, h2, h3, h4, h5, h6{
+    @include font-heading;
+}
+
+.bg-colored{
+    h1, h2, h3, h4, h5, h6, p, span, small, a, li{
+        color: $clr-white;
+        svg{
+            path{
+                fill:$clr-white;
+                transition:fill 0.3s ease;
+            }
+        }
+    }
+}
+
+p, ul, ol, body{
+    @include font-size($p-font-sizes);
+    @include font-body;
+}
+
+.bg-colored{
+    p, ul, ol, small, span, a{
+        color: $clr-white;
+    }
+}

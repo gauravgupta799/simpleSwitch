@@ -1,0 +1,250 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.footer{
+    background: $clr-primary;
+    &__list-right{
+        // display: flex;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // gap:rem(2) rem(16);
+        display: grid;
+        justify-content: flex-end;
+        li{
+            display: flex;
+            align-items: center;
+            gap:rem(16);
+            span{
+                color:$clr-white;
+            }
+            // &:not(:first-child){
+            //     &::marker{
+            //         content: "|";
+            //         color:$clr-white;
+            //     }
+            // } 
+            // a{
+            //     margin-left: rem(10);
+            //     @include breakpoint-sm{
+            //         margin-left: rem(16); 
+            //     }
+            // }
+            // .link-last{               
+            //     margin-left: 0;
+            //     @media only screen and (min-width:em(488)){
+            //         margin-left: rem(10);
+            //     }
+            //     @include breakpoint-sm{
+            //         margin-left: rem(16); 
+            //     }
+            // }
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link{
+        position: relative;
+        overflow: hidden;
+        font-size: rem(16);
+        line-height: 2;
+        text-transform: capitalize;
+        @include link-hover-effect($clr-white, $clr-secondary);
+        // font-weight: 600;
+        address{
+            @extend .footer__link;
+            font-family: $ff-secondary;
+            display: inline-flex;
+            line-height: 2;
+        }
+        &:hover{
+            background-position: 0 0;
+        }
+        // &::selection{
+        //     @include hover-effect;
+        // }
+    }
+    &__bottom-right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap:rem(16);
+        @include breakpoint-md{
+            gap:rem(32);
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+.footer-logo{
+    height: rem(80);
+    @include breakpoint-sm{
+        height: rem(100);
+    }
+    @include breakpoint-md{
+        height: auto;
+    }
+}
+
+.socials-list {
+    list-style: none;
+    display: flex;
+    gap:0.75rem;
+    @include breakpoint-xl{
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+    &--mobile{
+        .socials-link{
+            background: $clr-secondary;
+            transition:all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+            &:hover{
+                cursor: pointer;
+                background: $clr-white;
+                svg path{
+                    fill: $clr-primary;
+                }
+            } 
+        }
+    }
+}
+
+.socials-item{
+    @include relative-hidden;
+}
+
+.socials-link{
+    @include relative-hidden;
+    @include flex-center; 
+    @include border-radius(50%);
+    background: $clr-secondary;
+    padding:em(12);
+    transition:all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: 1;
+    @include hover-effect($clr-white);
+
+    span{
+        display: flex;
+    }
+
+    &:hover{
+        cursor: pointer;
+        &::before{
+            transform: translateY(0);
+        }
+    } 
+
+
+
+}
+
+
+.info-list{
+    @include flex-center-vertical;
+    flex-wrap: wrap;
+    gap:0.6rem;
+    row-gap: 5px;
+    @include breakpoint-sm{
+        gap:1rem;
+    }
+    @include breakpoint-xl{
+        gap:2rem;
+    }
+    @include breakpoint-xxxl{
+        gap:1.5rem;
+    }
+    li{
+        white-space: nowrap;
+          &:not(:first-child){
+            &::marker{
+                content: "|";
+                color:$clr-white;
+            }
+        } 
+    }
+
+    .info-link{
+        position: relative;
+        font-size: rem(16);
+        line-height: 1.5;
+        @include link-hover-effect($clr-white, $clr-secondary);
+        font-weight: 600;
+        margin-left: rem(10);
+        @include breakpoint-sm{
+            margin-left: rem(16); 
+        }   
+        &:hover{
+            cursor: pointer;
+            background-position: 0 0;
+        }
+    }
+    .link-last{               
+        margin-left: 0;
+        @media only screen and (min-width:em(354.99)){
+            margin-left: rem(10);
+        }
+        @include breakpoint-sm{
+            margin-left: rem(16); 
+        }
+    }
+}
+
+.app-stores{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:rem(16);
+    @include breakpoint-md{
+        flex-wrap: nowrap;
+        gap:rem(24);
+    }
+    @include breakpoint-xxl{
+        flex-wrap: nowrap;
+        gap:rem(32);
+    }
+}
+
+.reserved-info-wrapper{
+    @include flex-center-vertical;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint-md{
+        gap:rem(32);
+        justify-content: flex-start;
+    }
+    @include breakpoint-lg{
+        gap:rem(0);
+    }
+    @include breakpoint-xl{
+        gap:rem(20)
+    }
+    @media only screen and (min-width: em(1280)){
+        gap: rem(48);
+    }
+    @media only screen and (min-width: em(1366)){
+        gap: rem(80);
+    }
+}
+
+.designed-by-text{
+    @include flex-center-vertical;
+    gap: rem(4);
+    a{
+        font-size: rem(16);
+        text-decoration:underline;
+        text-decoration-color: $clr-white;
+        text-underline-offset: 2px;
+        
+    }
+    @include breakpoint-md{
+        justify-content: flex-end;
+    }
+}
+

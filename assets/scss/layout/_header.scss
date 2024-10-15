@@ -1,0 +1,84 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+// ================================
+.header{
+    position: sticky;
+    z-index: 9;
+    top:0;
+    left: 0;
+    width: 100%;
+    background: $clr-white;
+    @include transition(top, 0.5s, ease-out);
+
+    &.hidden{
+        top: rem(-136);
+    }
+    &__inner-desktop{
+        position: relative;
+        @include flex-center-vertical;
+        justify-content: space-between;
+        transition: transform 0.25s ease;
+    }
+    &__mobile{
+        @extend .header__inner-desktop;
+        display: flex;
+        padding:em(16);
+        margin-top: rem(16);
+        @include breakpoint-xl{
+            display: none;
+        }
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+    }
+    &__signIn{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+.header-logo{
+    img{
+        // height: rem(48);
+        // @include breakpoint-sm{
+        //     height: rem(52);
+        // }
+        // @include breakpoint-md{
+        //     height:rem(56);
+        // }
+        // @include breakpoint-lg{
+        //     height: auto;
+        // }
+    }
+}
+
+.header-desktop{
+    transition:all 0.25s ease;
+    padding-block:em(16);
+    border-bottom: 1px solid $clr-black;
+}
+
+.header-desktop.sticky{
+    box-shadow: 0 2px 5px $linear-gradient-clr;
+    border-color:$clr-white;
+}
+
+
+// ================================
+
+
+// ========== hamburger =============
+.hamburger-wrapper{
+    cursor: pointer;
+    display: flex;
+    @media only screen and (min-width:em(1400)){
+        display: none;
+    }
+}
