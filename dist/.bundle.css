@@ -1509,6 +1509,135 @@ p, ul, ol, body {
   background-size: cover;
 }
 
+.our-mission__wrapper {
+  position: relative;
+  padding-inline: 1em;
+}
+@media only screen and (min-width: 36em) {
+  .our-mission__wrapper {
+    padding-inline: 2em;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .our-mission__wrapper {
+    padding-inline: 3em;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .our-mission__wrapper {
+    padding-inline: 4em;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .our-mission__wrapper {
+    padding-inline: 5em;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .our-mission__wrapper {
+    padding-inline: 6em;
+  }
+}
+.our-mission__wrapper figure {
+  margin-top: -5rem;
+}
+@media only screen and (min-width: 36em) {
+  .our-mission__wrapper figure {
+    margin-top: -6rem;
+  }
+}
+.our-mission__wrapper figure img {
+  max-width: 7rem;
+}
+@media only screen and (min-width: 36em) {
+  .our-mission__wrapper figure img {
+    max-width: 9rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .our-mission__wrapper figure img {
+    max-width: 10.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .our-mission__wrapper figure img {
+    max-width: 13.75rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .our-mission__wrapper figure img {
+    max-width: 16.25rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .our-mission__wrapper figure img {
+    max-width: 100%;
+  }
+}
+
+.our-vision {
+  position: relative;
+  background-color: #0832FF;
+}
+.our-vision .custom-shape-divider-bottom-1729077812 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.our-vision .custom-shape-divider-bottom-1729077812 svg {
+  position: relative;
+  display: block;
+  width: calc(104% + 1.3px);
+  height: 100px;
+}
+.our-vision .custom-shape-divider-bottom-1729077812 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.join-team {
+  position: relative;
+  background-color: #0832FF;
+  margin-top: -5rem;
+}
+.join-team .custom-shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.join-team .custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+  transform: rotateY(180deg);
+}
+.join-team .custom-shape-divider-top .shape-fill {
+  fill: #FFFFFF;
+}
+.join-team .custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.join-team .custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+.join-team .custom-shape-divider-bottom .shape-fill {
+  fill: #FFFFFF;
+}
+
 .swiper-button-disabled {
   opacity: 0.8;
   background: #46EB25;
@@ -1531,7 +1660,7 @@ p, ul, ol, body {
 }
 @media only screen and (min-width: 100em) {
   .section-header {
-    max-width: 45rem;
+    max-width: 46rem;
   }
 }
 
@@ -2234,7 +2363,6 @@ select {
 }
 .nav__link {
   position: relative;
-  overflow: hidden;
   display: inline-flex;
   align-items: center;
   font-size: 1.125rem;
@@ -2246,23 +2374,33 @@ select {
   position: relative;
   display: inline-flex;
   margin: 0;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, #46EB25, #46EB25 50%, #000000 50%);
+  background-position: 0 -100%;
+  background-size: 100% 200%;
+  transition: background-position 0.3s ease;
 }
-.nav__link.active svg path, .nav__link:hover svg path {
-  fill: #46EB25;
-}
-.nav__list {
-  position: relative;
-}
-.nav__list::before {
+.nav__link::before {
   content: "";
   position: absolute;
-  bottom: -38px;
+  bottom: -40px;
   left: 0;
   background-color: #46EB25;
   height: 4px;
   width: 0%;
   transition: width 0.3s ease;
   border-radius: 10px;
+}
+.nav__link.active span, .nav__link:hover span {
+  background-position: 0 0;
+}
+.nav__link.active::before, .nav__link:hover::before {
+  width: 100%;
+}
+.nav__list {
+  position: relative;
 }
 .nav__list.active a {
   color: #46EB25;

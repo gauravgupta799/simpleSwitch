@@ -261,6 +261,131 @@
 }
 
 
+// About Start
+.our-mission{
+    &__wrapper{
+        position: relative;
+        padding-inline: em(16);
+        @include breakpoint-sm{
+            padding-inline: em(32);  
+        }
+        @include breakpoint-md{
+            padding-inline: em(48);  
+        }
+        @include breakpoint-lg{
+            padding-inline: em(64);  
+        }
+        @include breakpoint-xl{
+            padding-inline: em(80);  
+        }
+        @include breakpoint-xxl{
+            padding-inline: em(96);  
+        }
+        figure{
+            margin-top: -5rem;
+            @include breakpoint-sm{
+                margin-top: -6rem;
+            }
+            img{
+                max-width: rem(112);
+                @include breakpoint-sm{
+                    max-width: rem(144);
+                }
+                @include breakpoint-md{
+                    max-width: rem(172);
+                }
+                @include breakpoint-md{
+                    max-width: rem(220);
+                }
+                @include breakpoint-lg{
+                    max-width: rem(260);
+                }
+                @include breakpoint-xl{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.our-vision{
+    position: relative;
+    background-color: $clr-primary; 
+    // background-image: url('../../../assets/images/about/vision-bg.png'); 
+    // background-size: cover; 
+    // background-position: center;
+    // height: 100vh;
+    // width: 100%;
+    // margin-top: rem(-112);
+    .custom-shape-divider-bottom-1729077812 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-bottom-1729077812 svg {
+        position: relative;
+        display: block;
+        width: calc(104% + 1.3px);
+        height: 100px;
+    }
+    
+    .custom-shape-divider-bottom-1729077812 .shape-fill {
+        fill: #FFFFFF;
+    }
+}
+
+
+.join-team{
+    position: relative;
+    background-color: $clr-primary; 
+    margin-top: rem(-80);
+    .custom-shape-divider-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 30px;
+            transform: rotateY(180deg);
+        }
+        .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+    
+
+    .custom-shape-divider-bottom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+        .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+
+}
+
+// About End
+
+
 .swiper-button-disabled{
     opacity: 0.8;
     background: $clr-secondary;
@@ -277,7 +402,7 @@
         max-width: 40rem;
     }
     @include breakpoint-xxl{
-        max-width: 45rem;
+        max-width: 46rem;
     }
 }
 

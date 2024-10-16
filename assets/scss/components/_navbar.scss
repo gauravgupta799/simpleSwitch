@@ -20,7 +20,8 @@
     }
 
     &__link{
-        @include relative-hidden;
+        position: relative;
+        // @include relative-hidden;
         display: inline-flex;
         align-items: center;
         font-size: rem(18);
@@ -31,25 +32,12 @@
             position: relative;
             display: inline-flex;
             margin: 0;
-            // @include link-hover-effect($clr-black, $clr-secondary);
+            @include link-hover-effect($clr-black, $clr-secondary);
         }
-
-        &.active,
-        &:hover{
-            span{
-                // background-position: 0 0;
-            }
-            svg path{
-                fill: $clr-secondary;
-            }
-        }
-    }
-    &__list{
-        position: relative;
         &::before{
             content: "";
             position: absolute;
-            bottom: -38px;
+            bottom: -40px;
             left: 0;
             background-color:$clr-secondary;
             height: 4px;
@@ -57,6 +45,22 @@
             transition:width 0.3s ease;
             @include border-radius(10px);
         }
+
+        &.active,
+        &:hover{
+            span{
+                background-position: 0 0;
+            }
+            // svg path{
+            //     fill: $clr-secondary;
+            // }
+            &::before{
+                width: 100%;
+            }
+        }
+    }
+    &__list{
+        position: relative;
         &.active{
             a{
                 color:$clr-secondary;
