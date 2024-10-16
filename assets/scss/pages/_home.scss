@@ -46,7 +46,13 @@
 .quick-questions{
     &__wrapper{
         display: flex;
-        gap:rem(32);
+        gap:rem(16);
+        @include breakpoint-sm{
+            gap:rem(24); 
+        }
+        @include breakpoint-md{
+            gap:rem(32); 
+        }
 
         figure{
             flex-shrink: 0;
@@ -96,15 +102,16 @@
     &__btns-wrapper{
         @include flex-center-vertical;
         justify-content: flex-end;
-        gap: rem(20);
+        gap: rem(16);
+        @include breakpoint-sm{
+            gap:rem(20);
+        }
         button{
             @include border-radius(8px);
+            padding:em(8) em(16);
             &:hover{
                 background-color: $clr-secondary;
                 border-color:$clr-black;
-                // svg path{
-                //     fill:$clr-white;
-                // }
             }
         }
     }
@@ -117,7 +124,7 @@
         gap:rem(32);
         max-width: 25rem;
         margin-inline: auto;
-        border-bottom: 1.5px solid #3b3b3b;
+        border-bottom: 1.5px solid $clr-grey-1;
         @include breakpoint-md{
             gap:rem(48);
         }
@@ -150,9 +157,6 @@
             }
         }
     }
-    &__content-wrapper{
-
-    }
 }
 
 .steps{
@@ -167,7 +171,7 @@
     }
     &__item{
         display: flex;
-        gap:rem(28);
+        gap:rem(24);
         @include breakpoint-sm{
             gap:rem(32);
         }
@@ -215,12 +219,29 @@
 }
 
 .co-founder-card{
-    max-width: rem(474);
-    padding:em(24) em(48);
+    max-width: rem(300);
+    padding:em(16) em(24);
     background-color: $clr-white;
     border-top: 7px solid $clr-primary;
     position: absolute;
     bottom: 0;
+    p{
+        font-size: rem(16);
+        @include breakpoint-md{
+            font-size: rem(18);
+        }
+    }
+    @include breakpoint-md{
+        max-width: rem(360);
+        padding:em(20) em(32);
+    }
+    @include breakpoint-lg{
+        max-width: rem(420);
+        padding:em(24) em(48);
+    }
+    @include breakpoint-xl{
+        max-width: rem(474);
+    }
 }
 
 .brands{
@@ -246,9 +267,18 @@
 }
 
 .section-header{
-    max-width: 45rem;
     margin-inline:auto;
     text-align:center;
+    max-width: 30rem;
+    @include breakpoint-lg{
+        max-width: 35rem;
+    }
+    @include breakpoint-xl{
+        max-width: 40rem;
+    }
+    @include breakpoint-xxl{
+        max-width: 45rem;
+    }
 }
 
 .section-subTitle{

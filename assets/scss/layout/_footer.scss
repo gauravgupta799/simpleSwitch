@@ -8,46 +8,27 @@
 .footer{
     background: $clr-primary;
     &__list-right{
-        // display: flex;
-        // align-items: center;
-        // flex-wrap: wrap;
-        // gap:rem(2) rem(16);
         display: grid;
-        justify-content: flex-end;
+        gap: rem(12);
+        @include breakpoint-lg{
+            justify-content: flex-end;
+        }
         li{
-            display: flex;
-            align-items: center;
-            gap:rem(16);
+            @include flex-center-vertical;
+            gap:rem(20);
+            @media only screen and (min-width:em(378)){
+                align-items: center; 
+                gap:rem(16); 
+            }
             span{
                 color:$clr-white;
-            }
-            // &:not(:first-child){
-            //     &::marker{
-            //         content: "|";
-            //         color:$clr-white;
-            //     }
-            // } 
-            // a{
-            //     margin-left: rem(10);
-            //     @include breakpoint-sm{
-            //         margin-left: rem(16); 
-            //     }
-            // }
-            // .link-last{               
-            //     margin-left: 0;
-            //     @media only screen and (min-width:em(488)){
-            //         margin-left: rem(10);
-            //     }
-            //     @include breakpoint-sm{
-            //         margin-left: rem(16); 
-            //     }
-            // }
+            } 
         }
     }
     &__list{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-space-between;
+        flex-wrap: wrap;
+
     }
     &__link{
         position: relative;
@@ -61,7 +42,7 @@
             @extend .footer__link;
             font-family: $ff-secondary;
             display: inline-flex;
-            line-height: 2;
+            line-height: 1.5;
         }
         &:hover{
             background-position: 0 0;
@@ -71,9 +52,7 @@
         // }
     }
     &__bottom-right{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-space-between;
         flex-wrap: wrap;
         gap:rem(16);
         @include breakpoint-md{
@@ -83,15 +62,15 @@
     }
 }
 
-.footer-logo{
-    height: rem(80);
-    @include breakpoint-sm{
-        height: rem(100);
-    }
-    @include breakpoint-md{
-        height: auto;
-    }
-}
+// .footer-logo{
+//     height: rem(80);
+//     @include breakpoint-sm{
+//         height: rem(100);
+//     }
+//     @include breakpoint-md{
+//         height: auto;
+//     }
+// }
 
 .socials-list {
     list-style: none;
@@ -140,61 +119,58 @@
             transform: translateY(0);
         }
     } 
-
-
-
 }
 
 
-.info-list{
-    @include flex-center-vertical;
-    flex-wrap: wrap;
-    gap:0.6rem;
-    row-gap: 5px;
-    @include breakpoint-sm{
-        gap:1rem;
-    }
-    @include breakpoint-xl{
-        gap:2rem;
-    }
-    @include breakpoint-xxxl{
-        gap:1.5rem;
-    }
-    li{
-        white-space: nowrap;
-          &:not(:first-child){
-            &::marker{
-                content: "|";
-                color:$clr-white;
-            }
-        } 
-    }
+// .info-list{
+//     @include flex-center-vertical;
+//     flex-wrap: wrap;
+//     gap:0.6rem;
+//     row-gap: 5px;
+//     @include breakpoint-sm{
+//         gap:1rem;
+//     }
+//     @include breakpoint-xl{
+//         gap:2rem;
+//     }
+//     @include breakpoint-xxxl{
+//         gap:1.5rem;
+//     }
+//     li{
+//         white-space: nowrap;
+//           &:not(:first-child){
+//             &::marker{
+//                 content: "|";
+//                 color:$clr-white;
+//             }
+//         } 
+//     }
 
-    .info-link{
-        position: relative;
-        font-size: rem(16);
-        line-height: 1.5;
-        @include link-hover-effect($clr-white, $clr-secondary);
-        font-weight: 600;
-        margin-left: rem(10);
-        @include breakpoint-sm{
-            margin-left: rem(16); 
-        }   
-        &:hover{
-            cursor: pointer;
-            background-position: 0 0;
-        }
-    }
-    .link-last{               
-        margin-left: 0;
-        @media only screen and (min-width:em(354.99)){
-            margin-left: rem(10);
-        }
-        @include breakpoint-sm{
-            margin-left: rem(16); 
-        }
-    }
-}
+//     .info-link{
+//         position: relative;
+//         font-size: rem(16);
+//         line-height: 1.5;
+//         @include link-hover-effect($clr-white, $clr-secondary);
+//         font-weight: 600;
+//         margin-left: rem(10);
+//         @include breakpoint-sm{
+//             margin-left: rem(16); 
+//         }   
+//         &:hover{
+//             cursor: pointer;
+//             background-position: 0 0;
+//         }
+//     }
+//     .link-last{               
+//         margin-left: 0;
+//         @media only screen and (min-width:em(354.99)){
+//             margin-left: rem(10);
+//         }
+//         @include breakpoint-sm{
+//             margin-left: rem(16); 
+//         }
+//     }
+// }
 
 .app-stores{
     display: flex;
@@ -206,7 +182,6 @@
         gap:rem(24);
     }
     @include breakpoint-xxl{
-        flex-wrap: nowrap;
         gap:rem(32);
     }
 }
@@ -217,10 +192,10 @@
     flex-wrap: wrap;
     @include breakpoint-md{
         gap:rem(32);
-        justify-content: flex-start;
     }
     @include breakpoint-lg{
         gap:rem(0);
+        justify-content: flex-start;
     }
     @include breakpoint-xl{
         gap:rem(20)

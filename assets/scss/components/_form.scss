@@ -107,20 +107,19 @@
 }
 
 
-
-.custom-select {
-    position: relative;
-    &::after {
-        @include caret-down;
-        transition:transform 0.3s ease;
-        transform:rotate(0deg);
-    }
-    &:focus-within{
-        &::after {
-            transform:rotate(180deg);
-        }
-    }
-}
+// .custom-select {
+//     position: relative;
+//     &::after {
+//         @include caret-down;
+//         transition:transform 0.3s ease;
+//         transform:rotate(0deg);
+//     }
+//     &:focus-within{
+//         &::after {
+//             transform:rotate(180deg);
+//         }
+//     }
+// }
 
 select {
     appearance: none; /* Remove default arrow */
@@ -140,65 +139,45 @@ select {
 }
 
 .cta-link{
-    display:inline-flex;
-    align-items: center;
-    gap:rem(12);
-    font-size: rem(22);
-    line-height: 1.28;
-    font-family: $ff-primary;
-    text-transform: uppercase;
-    @include link-hover-effect($clr-white, $clr-secondary);
-    svg{
-        @include dimensions(rem(20), rem(20));
-        @include breakpoint-sm{
-            @include dimensions(rem(24), rem(24));  
-        }
-        @include breakpoint-md{
-            @include dimensions(rem(28), rem(28)); 
-        }
-        @include breakpoint-lg{
-            @include dimensions(rem(32), rem(32));
-        }
-        @include breakpoint-xl{
-            @include dimensions(rem(36), rem(36));
-        }
-        path{
-            fill: $clr-white;
-            transition:fill 0.3s ease;
+    @include flex-space-between;
+    flex-wrap: wrap;
+    row-gap:rem(12);
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap:6px;
+        span{
+            font-size: rem(14);
+            color:#878787;
         }
     }
-    
-    @include breakpoint-sm{
-        font-size: rem(24);
-        gap:rem(18);
-    }
-    @include breakpoint-md{
-        font-size: rem(26);
-        gap:rem(24);
-    }
-    @include breakpoint-xl{
-        font-size: rem(28);
-        gap:rem(28);
-    }
-    @include breakpoint-xxl{
-        gap:rem(36);
+    &__link{
+        font-size: rem(18);
+        line-height: 1.28;
+        font-family: $ff-secondary;
+        text-decoration: underline;
+        text-decoration-color:$clr-black;
+        text-underline-offset:4px;
+        @include link-hover-effect($clr-black, $clr-secondary);
+        &:hover{
+            background-position: 0 0;
+            text-decoration-color:$clr-secondary;
+        }
+
     }
 
-    &:hover{
-        background-position: 0 0;
-        svg{
-            path{
-               fill: $clr-secondary;
-           }
-        }
-    }
 }
 
-.cta-address {
-    color:$clr-white;
-}
+// .cta-form-title{
+//     font-size: rem(16);
+// }
 
-.form-label{
-    color:$clr-white;
-    text-transform: capitalize;
-}
+// .cta-address {
+//     color:$clr-white;
+// }
+
+// .form-label{
+//     color:$clr-white;
+//     text-transform: capitalize;
+// }

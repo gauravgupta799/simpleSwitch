@@ -217,7 +217,7 @@ var swiper1 = new Swiper(".swiper-testimonials", {
         576:{
             slidesPerView:2,
         },
-        768:{
+        992:{
             slidesPerView:3,
             // spaceBetween:30,
         },

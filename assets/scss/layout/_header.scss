@@ -46,16 +46,16 @@
 
 .header-logo{
     img{
-        // height: rem(48);
-        // @include breakpoint-sm{
-        //     height: rem(52);
-        // }
-        // @include breakpoint-md{
-        //     height:rem(56);
-        // }
-        // @include breakpoint-lg{
-        //     height: auto;
-        // }
+        max-width:rem(224);
+        @media only screen and (min-width:em(408)){
+            max-width:rem(256); 
+        }
+        @include breakpoint-sm{
+            max-width:rem(272);
+        }
+        @include breakpoint-md{
+            max-width:100%;
+        }
     }
 }
 
@@ -80,5 +80,12 @@
     display: flex;
     @media only screen and (min-width:em(1400)){
         display: none;
+    }
+}
+
+.header-signIn{
+    display: none;
+    @include breakpoint-lg{
+        display: flex;
     }
 }

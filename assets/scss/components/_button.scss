@@ -137,9 +137,23 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-right: rem(144);
-    margin-bottom: rem(80);
+    margin-right: rem(32);
+    margin-bottom: rem(64);  
     text-align: center;
+    @include breakpoint-sm{
+        margin-right: rem(64);
+        margin-bottom: rem(64);  
+    }
+    @include breakpoint-md{
+        margin-right: rem(80);
+        margin-bottom: rem(80);  
+    }
+    @include breakpoint-lg{
+        margin-right: rem(112); 
+    }
+    @include breakpoint-xl{
+        margin-right: rem(144);
+    }
 }
 
 .play-btn{

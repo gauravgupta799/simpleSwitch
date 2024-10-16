@@ -68,12 +68,26 @@
     }
 }
 
-.nav, .header__righ{
+.nav{
     display: none;
     @media only screen and (min-width:em(1400)){
         display: flex;
     }
 }
+
+// .header__right{}
+
+
+.header__actions{
+    display: none;
+    @media only screen and (min-width:em(992)){
+        display: flex;
+        align-items: center;
+        gap:rem(16);
+    }
+}
+
+
 
 // ===== MObile Menu Start ===========
 .mobile-menu{
@@ -86,7 +100,7 @@
     background: $clr-primary;
     transform:translateX(-100%);
     transition:transform 0.2s ease-out;
-    @include breakpoint-xl{
+    @media only screen and (min-width:em(1400)){
         transform:translateX(-100%) !important;
     }
     &__inner{
