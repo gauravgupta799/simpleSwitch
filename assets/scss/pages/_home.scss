@@ -311,12 +311,6 @@
 .our-vision{
     position: relative;
     background-color: $clr-primary; 
-    // background-image: url('../../../assets/images/about/vision-bg.png'); 
-    // background-size: cover; 
-    // background-position: center;
-    // height: 100vh;
-    // width: 100%;
-    // margin-top: rem(-112);
     .custom-shape-divider-bottom-1729077812 {
         position: absolute;
         bottom: 0;
@@ -337,7 +331,6 @@
         fill: #FFFFFF;
     }
 }
-
 
 .join-team{
     position: relative;
@@ -382,9 +375,61 @@
     }
 
 }
-
 // About End
 
+
+
+// What's SimpleSwitch Start
+.overview{
+    // background-image: url("../../../assets/images/what-simpleSwitch/overview-switch-2.png");
+    // background-repeat: no-repeat;
+    // background-position: center bottom;
+    // background-size: cover;
+    // height: 100vh;
+    background: $clr-primary;
+}
+
+
+.specifications{
+    
+    &__item{
+        display: flex;
+        align-items: center;
+        gap:rem(16);
+        padding-block:em(10) em(16);
+        @include breakpoint-sm{
+            gap:rem(20);
+        }
+        @include breakpoint-md{
+            gap:rem(24);
+        }
+
+        span{
+            font-size: rem(20);
+            line-height: 1.3;
+            font-family: $ff-primary-m;
+            @include breakpoint-sm{
+                font-size: rem(24);
+            }
+            @include breakpoint-md{
+                font-size: rem(28);
+            }
+        }
+    }
+}
+// What's SimpleSwitch End
+
+
+.power-management{
+    background-image: url("../../../assets/images/what-simpleSwitch/power-management-1.png");
+    @include background-cover;
+    height: 75vh;
+    &__wrapper{
+        display: flex;
+        align-items: flex-end;
+        height: 70vh;
+    }
+}
 
 .swiper-button-disabled{
     opacity: 0.8;
