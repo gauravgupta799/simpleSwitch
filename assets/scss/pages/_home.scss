@@ -12,7 +12,7 @@
         text-align: center;
     }
     &__subTitle{
-        max-width: 40rem;
+        max-width: 45rem;
         margin-inline: auto;
     }
 }
@@ -44,6 +44,7 @@
 }
 
 .quick-questions{
+    position: relative;
     &__wrapper{
         display: flex;
         gap:rem(16);
@@ -311,69 +312,69 @@
 .our-vision{
     position: relative;
     background-color: $clr-primary; 
-    .custom-shape-divider-bottom-1729077812 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-    }
-    
-    .custom-shape-divider-bottom-1729077812 svg {
-        position: relative;
-        display: block;
-        width: calc(104% + 1.3px);
-        height: 100px;
-    }
-    
-    .custom-shape-divider-bottom-1729077812 .shape-fill {
-        fill: #FFFFFF;
-    }
+}
+
+.custom-shape-divider-bottom-1729077812 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1729077812 svg {
+    position: relative;
+    display: block;
+    width: calc(104% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1729077812 .shape-fill {
+    fill: #FFFFFF;
 }
 
 .join-team{
     position: relative;
     background-color: $clr-primary; 
     margin-top: rem(-80);
-    .custom-shape-divider-top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 30px;
-            transform: rotateY(180deg);
-        }
-        .shape-fill {
-            fill: #FFFFFF;
-        }
-    }
-    
+}
 
-    .custom-shape-divider-bottom{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 60px;
-        }
-        .shape-fill {
-            fill: #FFFFFF;
-        }
+.custom-shape-divider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 30px;
+        transform: rotateY(180deg);
     }
+    .shape-fill {
+        fill: #FFFFFF;
+    }
+}
 
+.custom-shape-divider-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 60px;
+    }
+    .shape-fill {
+        fill: #FFFFFF;
+    }
 }
 // About End
 
@@ -381,14 +382,23 @@
 
 // What's SimpleSwitch Start
 .overview{
-    // background-image: url("../../../assets/images/what-simpleSwitch/overview-switch-2.png");
-    // background-repeat: no-repeat;
-    // background-position: center bottom;
-    // background-size: cover;
-    // height: 100vh;
     background: $clr-primary;
+    position: relative;
+    .simpleSwitch-fig{
+        position: relative;
+        z-index: 1;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom:0;
+            width: 100%;
+            height: 30vh;
+            background: $clr-white;
+            z-index: -1;
+        }
+    }
 }
-
 
 .specifications{
     
@@ -420,10 +430,70 @@
 // What's SimpleSwitch End
 
 
+// Ev Charging start
+.effortless{
+    &__list{
+        li{
+            display: flex;
+            gap:rem(16);
+            @include breakpoint-sm{
+                gap:rem(24); 
+            }
+            @include breakpoint-md{
+                gap:rem(32); 
+            }
+            figure{
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.secure{
+    position: relative;
+    &__content-wrapper{
+        text-align: center;
+    }
+}
+// Ev Charging end
+
+// Counter Start
+.counter{
+    display: flex;
+    justify-content: center;
+    span{
+        font-size: rem(44);
+        font-family:$ff-primary;
+        @include breakpoint-sm{
+            font-size: rem(48);
+        }
+        @include breakpoint-md{
+            font-size: rem(54);
+        }
+        @include breakpoint-lg{
+            font-size: rem(60);
+        }
+        @include breakpoint-xl{
+            font-size: rem(66);
+        }
+        @include breakpoint-xxl{
+            font-size: rem(72);
+        }
+    }
+    span{
+        display: inline-flex;
+        margin: 0;
+    }
+}
+// Counter End
+
 .power-management{
     background-image: url("../../../assets/images/what-simpleSwitch/power-management-1.png");
     @include background-cover;
     height: 75vh;
+    &--ev{
+        background-image: url("../../../assets/images/ev-charging/img-1.png");
+    }
     &__wrapper{
         display: flex;
         align-items: flex-end;

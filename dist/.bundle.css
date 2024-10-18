@@ -1230,7 +1230,7 @@ p, ul, ol, body {
   text-align: center;
 }
 .hero__subTitle {
-  max-width: 40rem;
+  max-width: 45rem;
   margin-inline: auto;
 }
 
@@ -1272,6 +1272,9 @@ p, ul, ol, body {
   }
 }
 
+.quick-questions {
+  position: relative;
+}
 .quick-questions__wrapper {
   display: flex;
   gap: 1rem;
@@ -1579,7 +1582,8 @@ p, ul, ol, body {
   position: relative;
   background-color: #0832FF;
 }
-.our-vision .custom-shape-divider-bottom-1729077812 {
+
+.custom-shape-divider-bottom-1729077812 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1587,13 +1591,15 @@ p, ul, ol, body {
   overflow: hidden;
   line-height: 0;
 }
-.our-vision .custom-shape-divider-bottom-1729077812 svg {
+
+.custom-shape-divider-bottom-1729077812 svg {
   position: relative;
   display: block;
   width: calc(104% + 1.3px);
   height: 100px;
 }
-.our-vision .custom-shape-divider-bottom-1729077812 .shape-fill {
+
+.custom-shape-divider-bottom-1729077812 .shape-fill {
   fill: #FFFFFF;
 }
 
@@ -1602,7 +1608,8 @@ p, ul, ol, body {
   background-color: #0832FF;
   margin-top: -5rem;
 }
-.join-team .custom-shape-divider-top {
+
+.custom-shape-divider-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -1610,17 +1617,18 @@ p, ul, ol, body {
   overflow: hidden;
   line-height: 0;
 }
-.join-team .custom-shape-divider-top svg {
+.custom-shape-divider-top svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 30px;
   transform: rotateY(180deg);
 }
-.join-team .custom-shape-divider-top .shape-fill {
+.custom-shape-divider-top .shape-fill {
   fill: #FFFFFF;
 }
-.join-team .custom-shape-divider-bottom {
+
+.custom-shape-divider-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1628,18 +1636,33 @@ p, ul, ol, body {
   overflow: hidden;
   line-height: 0;
 }
-.join-team .custom-shape-divider-bottom svg {
+.custom-shape-divider-bottom svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 60px;
 }
-.join-team .custom-shape-divider-bottom .shape-fill {
+.custom-shape-divider-bottom .shape-fill {
   fill: #FFFFFF;
 }
 
 .overview {
   background: #0832FF;
+  position: relative;
+}
+.overview .simpleSwitch-fig {
+  position: relative;
+  z-index: 1;
+}
+.overview .simpleSwitch-fig::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30vh;
+  background: #ffffff;
+  z-index: -1;
 }
 
 .specifications__item {
@@ -1674,12 +1697,78 @@ p, ul, ol, body {
   }
 }
 
+.effortless__list li {
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (min-width: 36em) {
+  .effortless__list li {
+    gap: 1.5rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .effortless__list li {
+    gap: 2rem;
+  }
+}
+.effortless__list li figure {
+  flex-shrink: 0;
+}
+
+.secure {
+  position: relative;
+}
+.secure__content-wrapper {
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+}
+.counter span {
+  font-size: 2.75rem;
+  font-family: "Figtree-Extra-Bold", sans-serif;
+}
+@media only screen and (min-width: 36em) {
+  .counter span {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .counter span {
+    font-size: 3.375rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .counter span {
+    font-size: 3.75rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .counter span {
+    font-size: 4.125rem;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .counter span {
+    font-size: 4.5rem;
+  }
+}
+.counter span {
+  display: inline-flex;
+  margin: 0;
+}
+
 .power-management {
   background-image: url("../../../assets/images/what-simpleSwitch/power-management-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   height: 75vh;
+}
+.power-management--ev {
+  background-image: url("../../../assets/images/ev-charging/img-1.png");
 }
 .power-management__wrapper {
   display: flex;
@@ -2773,16 +2862,7 @@ select {
 
 .section-p {
   max-width: 100%;
-}
-@media only screen and (min-width: 48em) {
-  .section-p {
-    max-width: 80%;
-  }
-}
-@media only screen and (min-width: 100em) {
-  .section-p {
-    max-width: 70%;
-  }
+  max-width: 35rem;
 }
 
 .section-center-div {

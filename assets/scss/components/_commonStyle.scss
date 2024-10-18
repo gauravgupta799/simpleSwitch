@@ -27,12 +27,13 @@
 
 .section-p{
     max-width: 100%;
-    @include breakpoint-md{
-        max-width: 80%;
-    }
-    @include breakpoint-xxl{
-        max-width: 70%;
-    }
+    max-width: 35rem;
+    // @include breakpoint-md{
+    //     max-width: 80%;
+    // }
+    // @include breakpoint-xxl{
+    //     max-width: 70%;
+    // }
 }
 
 .section-center-div{
