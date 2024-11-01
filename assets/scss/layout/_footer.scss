@@ -26,8 +26,24 @@
         }
     }
     &__list{
-        @include flex-space-between;
-        flex-wrap: wrap;
+        @include breakpoint-sm{
+            @include flex-space-between;
+            flex-wrap: wrap;
+        }
+        &--bottom{
+            justify-content: flex-start;
+            gap:rem(16);
+            @include breakpoint-sm{
+                gap:rem(32);
+            }
+            @include breakpoint-lg{
+                justify-content: flex-end;
+                gap:rem(32);
+            }
+            @include breakpoint-xl{
+                gap:rem(48);
+            }
+        }
 
     }
     &__link{
@@ -36,20 +52,48 @@
         font-size: rem(16);
         line-height: 2;
         text-transform: capitalize;
-        @include link-hover-effect($clr-white, $clr-secondary);
-        // font-weight: 600;
+        z-index: 1;
+        color:$clr-white;
+        // @include link-hover-effect($clr-white, $clr-secondary);
+        @include transition(color, 0.3s , ease);
+        span{
+            color:$clr-white;
+            @include transition(color, 0.3s , ease);
+        }
         address{
             @extend .footer__link;
             font-family: $ff-secondary;
             display: inline-flex;
             line-height: 1.5;
         }
-        &:hover{
-            background-position: 0 0;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: rem(-40);
+            left: 0;
+            background-color:$clr-secondary;
+            height: rem(4);
+            width: 100%;
+            @include border-radius(6px);
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
         }
-        // &::selection{
-        //     @include hover-effect;
-        // }
+        &:hover{
+            // background-position: 0 0;
+            color:$clr-secondary;
+            span{
+                color:$clr-secondary;
+            }
+            &::before{
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+        }
+        &::selection{
+           background-color: $clr-white;
+           color:$clr-primary;
+        }
     }
     &__bottom-right{
         @include flex-space-between;
@@ -60,17 +104,15 @@
             flex-wrap: nowrap;
         }
     }
+    &__top-bottom{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:rem(16);
+        justify-content: space-between;
+    }
 }
 
-// .footer-logo{
-//     height: rem(80);
-//     @include breakpoint-sm{
-//         height: rem(100);
-//     }
-//     @include breakpoint-md{
-//         height: auto;
-//     }
-// }
 
 .socials-list {
     list-style: none;
@@ -122,56 +164,6 @@
 }
 
 
-// .info-list{
-//     @include flex-center-vertical;
-//     flex-wrap: wrap;
-//     gap:0.6rem;
-//     row-gap: 5px;
-//     @include breakpoint-sm{
-//         gap:1rem;
-//     }
-//     @include breakpoint-xl{
-//         gap:2rem;
-//     }
-//     @include breakpoint-xxxl{
-//         gap:1.5rem;
-//     }
-//     li{
-//         white-space: nowrap;
-//           &:not(:first-child){
-//             &::marker{
-//                 content: "|";
-//                 color:$clr-white;
-//             }
-//         } 
-//     }
-
-//     .info-link{
-//         position: relative;
-//         font-size: rem(16);
-//         line-height: 1.5;
-//         @include link-hover-effect($clr-white, $clr-secondary);
-//         font-weight: 600;
-//         margin-left: rem(10);
-//         @include breakpoint-sm{
-//             margin-left: rem(16); 
-//         }   
-//         &:hover{
-//             cursor: pointer;
-//             background-position: 0 0;
-//         }
-//     }
-//     .link-last{               
-//         margin-left: 0;
-//         @media only screen and (min-width:em(354.99)){
-//             margin-left: rem(10);
-//         }
-//         @include breakpoint-sm{
-//             margin-left: rem(16); 
-//         }
-//     }
-// }
-
 .app-stores{
     display: flex;
     align-items: center;
@@ -181,7 +173,7 @@
         flex-wrap: nowrap;
         gap:rem(24);
     }
-    @include breakpoint-xxl{
+    @include breakpoint-xl{
         gap:rem(32);
     }
 }
@@ -194,15 +186,15 @@
         gap:rem(32);
     }
     @include breakpoint-lg{
-        gap:rem(0);
+        // gap:rem(0);
         justify-content: flex-start;
     }
     @include breakpoint-xl{
-        gap:rem(20)
+        gap:rem(16)
     }
-    @media only screen and (min-width: em(1280)){
-        gap: rem(48);
-    }
+    // @media only screen and (min-width: em(1280)){
+    //     gap: rem(48);
+    // }
     @media only screen and (min-width: em(1366)){
         gap: rem(80);
     }
@@ -222,4 +214,3 @@
         justify-content: flex-end;
     }
 }
-

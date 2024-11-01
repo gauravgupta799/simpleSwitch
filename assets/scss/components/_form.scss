@@ -94,8 +94,10 @@
 .footer-form-control{
     line-height: 2.5;
     outline:none;
-    @include border-radius(24px);
+    // @include border-radius(24px);
+    border-radius: 24px 0 0 24px;
     border: 2px solid $clr-black;
+    border-right:none;
 }
 
 
@@ -106,6 +108,11 @@
     background: transparent;
 }
 
+.footer-form-control{
+    &:focus{
+        border-color:$clr-secondary;
+    }
+}
 
 // .custom-select {
 //     position: relative;
@@ -141,15 +148,15 @@ select {
 .cta-link{
     @include flex-space-between;
     flex-wrap: wrap;
-    row-gap:rem(12);
+    row-gap:rem(24);
 
     &__wrapper{
         display: flex;
         flex-direction: column;
-        gap:6px;
+        gap:rem(6);
         span{
             font-size: rem(14);
-            color:#878787;
+            color:$clr-grey;
         }
     }
     &__link{
@@ -168,16 +175,3 @@ select {
     }
 
 }
-
-// .cta-form-title{
-//     font-size: rem(16);
-// }
-
-// .cta-address {
-//     color:$clr-white;
-// }
-
-// .form-label{
-//     color:$clr-white;
-//     text-transform: capitalize;
-// }

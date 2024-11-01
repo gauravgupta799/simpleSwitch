@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
     <meta name="theme-color" content="#0832FF">
-    <link rel="shortcut icon" href="./assets/logos/logo-symbole-WG.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./dist/bundle.min.css">
-    <script src="./dist/bundle.min.js" defer></script>
-    <title>EV Charging | simpleSwitch</title>
+    <link rel="shortcut icon" href="../assets/logos/logo-symbole-WG.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../dist/bundle.min.css">
+    <script src="../dist/bundle.min.js" defer></script>
+    <title>Multifamily | simpleSwitch</title>
 </head>
 <body class="body">
 
@@ -16,7 +16,7 @@
     <div class="loader-container">
         <div class="loader-wrapper">
             <figure class="">
-                <img src="./assets/logos/logo-1.svg" alt="simpleSwitch's logo" class="img-fluid" loading="lazy">
+                <img src="../assets/logos/logo-2.svg" alt="simpleSwitch's logo" class="img-fluid" loading="lazy">
             </figure>
         </div>
     </div>
@@ -25,13 +25,27 @@
     <!-- Header Start -->
     <header class="header">
         <div class="header-desktop">
+            <div class="header__top bg--primary bg-colored py--1">
+                <div class="page-container">
+                    <div class="row">
+                        <div class="col-6">
+                            <figure class="">
+                                <img src="../assets/images/made-in-america-img.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <span class="fz-14">UL Listed - #E510161</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="page-container">
                 <div class="header__inner-desktop">
                     <!-- Logo-Start -->
                     <div class="header-logo-wrapper">
-                        <a href="./index.html" class="header__logo">
+                        <a href="../index.html" class="header__logo">
                             <figure class="header-logo">
-                                <img src="./assets/logos/logo-1.svg" alt="simpleSwitch's logo" class="img-fluid" loading="lazy">
+                                <img src="../assets/logos/logo-1.svg" alt="simpleSwitch's logo" class="img-fluid" loading="lazy">
                             </figure>
                         </a>
                     </div>
@@ -41,27 +55,44 @@
                     <nav class="nav">
                         <ul class="nav__menu  nav__menu--left list-none" role="navigation">
                             <li class="nav__list">
-                                <a href="./index.html" class="nav__link">                                   
+                                <a href="../index.html" class="nav__link">                                   
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li class="nav__list">
-                                <a href="./about.html" class="nav__link">
+                                <a href="../about.html" class="nav__link">
                                     <span>About</span>
                                 </a>
                             </li>             
                             <li class="nav__list">
-                                <a href="./shop.html" class="nav__link" >
+                                <a href="../products.html" class="nav__link" >
                                     <span>Shop</span>
                                 </a>
                             </li>
-                            <li class="nav__list">
-                                <a href="./what-is-simpleSwitch.html" class="nav__link" >
-                                    <span>What is simpleSwitch</span>
+                            <li class="nav__list subMenu">
+                                <a class="nav__link nav__link--submenu">
+                                    <span>Applications</span>   
+                                    <span class="caret-down-icon mt-0">
+                                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                            <path d="M14 20l10 10 10-10z" fill="#000"></path>
+                                        </svg> 
+                                    </span>
                                 </a>
-                            </li> 
+                                 <!-- Services Submenu -->
+                                 <ul class="subMenu__list list-none" id="submenu-desktop">
+                                    <li class="">
+                                        <a href="./ev-charging.html" class="subMenu__link">EV Charging</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./multi-family.html" class="subMenu__link">Multi Family</a>
+                                    </li>                                         
+                                    <li class="">
+                                        <a href="./heavy-appliances.html" class="subMenu__link">Heavy Appliances</a>
+                                    </li>                                         
+                                </ul>
+                            </li>               
                             <li class="nav__list">
-                                <a href="./contact.html" class="nav__link" >
+                                <a href="../contact.html" class="nav__link" >
                                     <span>Contact</span>
                                 </a>
                             </li>                  
@@ -71,15 +102,7 @@
                
                     <div class="header__right">
                         <div class="header__actions">
-                            <div class="header__signIn">
-                                <span class="d-flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 29.129 29.129">
-                                        <path id="user_1_" data-name="user (1)" d="M24.863,4.266a14.565,14.565,0,0,0-20.6,20.6,14.565,14.565,0,0,0,20.6-20.6ZM6.321,24.424a8.333,8.333,0,0,1,8.244-7.333,8.3,8.3,0,0,1,8.244,7.333,12.831,12.831,0,0,1-16.487,0Zm8.244-9.091a4.424,4.424,0,1,1,4.424-4.424A4.429,4.429,0,0,1,14.564,15.333Zm9.713,7.648A10.033,10.033,0,0,0,18,15.987a6.13,6.13,0,1,0-6.862,0A10.024,10.024,0,0,0,4.85,22.98a12.858,12.858,0,1,1,19.427,0Zm0,0" transform="translate(0)" fill="#000000"/>
-                                      </svg>
-                                </span>
-                                <span class="mt-0">Sign In</span>
-                            </div>
-                            <div class="cart-wrapper">
+                            <div class="cart-wrapper header-btn">
                                 <span class="card-icon d-flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="27.272" height="25.49" viewBox="0 0 27.272 25.49">
                                         <g id="online-shopping" transform="translate(0.199 0.153)">
@@ -92,9 +115,9 @@
                                       </svg>                               
                                 </span>
                             </div>
-                            <div class="btn-wrapper">
-                                <a href="#" class="btn btn--primary">
-                                    <span class="">Buy simpleSwitch</span>
+                            <div class="btn-wrapper header-btn">
+                                <a href="../product.html" class="btn btn--primary">
+                                    <span class="">Power up with simpleSwitch</span>
                                 </a>
                             </div>
                         </div>
@@ -102,18 +125,16 @@
                         <div class="hamburger-wrapper" id="hamburger-btn">
                             <div class="hamburger-btn">
                                 <span class="d-flex">
-                                    <img src="./assets/icons/hamburger.svg" alt="hamburger-icon" class="img-fluid">                                           
+                                    <img src="../assets/icons/hamburger.svg" alt="hamburger-icon" class="img-fluid">                                           
                                 </span>
                             </div>
                         </div>
                         <!-- Hamburger end -->  
                     </div>
 
-
                 </div>
             </div>
         </div>
-        <!-- <div class="divider divider--grey"></div> -->
         <!-- Desktop Menu End -->
 
 
@@ -132,27 +153,47 @@
                     <div class="col-md-6">
                         <ul class="mobile-menu__list list-none" id="mobile-menu" role="navigation">
                             <li>
-                                <a href="./index.html" class="mobile-menu__link">
+                                <a href="../index.html" class="mobile-menu__link">
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./about.html" class="mobile-menu__link">
+                                <a href="../about.html" class="mobile-menu__link">
                                     <span>About</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./shop.html" class="mobile-menu__link">
+                                <a href="../products.html" class="mobile-menu__link">
                                     <span>Shop</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="./what-is-simpleSwitch.html" class="mobile-menu__link">
-                                    <span>What is simpleSwitch</span>
-                                </a>
+                            <li class="mobile-submenu">
+                                <div class="submenu-service-link">
+                                    <a class="mobile-menu__link">
+                                        <span>Applications</span>
+                                    </a>
+                                    <span class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 15.997 9.878">
+                                            <path data-name="Icon material-navigate-next" d="M1.88 0 0 1.88 6.106 8 0 14.118 1.88 16l8-8z" transform="rotate(90 7.998 7.999)" fill="#fff"/>
+                                        </svg>  
+                                    </span>
+                                </div>
+                           
+                                <!-- Services Submenu -->
+                                <ul class="subMenu__list--mobile list-none">
+                                    <li>
+                                        <a href="./ev-charging.html" class="subMenu__link">EV Charging</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./multi-family.html" class="subMenu__link">Multi Family</a>
+                                    </li>                                         
+                                    <li>
+                                        <a href="./heavy-appliances.html" class="subMenu__link">Heavy Appliances</a>
+                                    </li>   
+                                </ul>
                             </li>
                             <li>
-                                <a href="./contact.html" class="mobile-menu__link">
+                                <a href="../contact.html" class="mobile-menu__link">
                                     <span>Contact</span>
                                 </a>
                             </li>
@@ -167,7 +208,9 @@
                                     </div>
                                     <ul class="footer__list list-none overflow-wrapper">
                                         <li class="footer__list-item">
-                                            <a href="mailto:info@smartfit.fitness" class="footer__link" target="_blank">info@simpleSwitch.com</a>
+                                            <a href="mailto:info@smartfit.fitness" class="footer__link" target="_blank">
+                                                <span class="tt-initial">info@simpleSwitch.com</span>
+                                            </a>
                                         </li>
                                         <li class="footer__list-item">
                                             <a href="tel:550-902-1355" class="footer__link" target="_blank">550-902-1355</a>
@@ -220,29 +263,36 @@
     <!-- Main Start -->
     <main class="main">
         <!-- Hero Section Start -->
-        <section class="hero pt--4 pt--md--6 pt--lg--8 pt--xxl--10">
+        <section class="hero pt--3 pt--sm--4 pt--md--6 pt--lg--8">
             <div class="page-container">
-                <div class="hero__header">
-                    <h1 class="hero__title"> EV Charging Made Simple</h1>
-                    <div class="overflow-wrapper">
-                        <p class="hero__subTitle mt-2">
-                            Get hassle-free, efficient EV charging without costly electrical upgrades. simpleSwitch allows you to connect EV chargers to fully loaded electrical panels, managing power intelligently so you can charge your vehicle safely and conveniently.
-                        </p>
+                <div class="row">
+                    <div class="col-sm-10 col-md-10 col-xxl-8 mx-auto">
+                        <div class="hero__header">
+                            <h1 class="hero__title px--xxl--2 py--1">
+                                Power Up Multi-Family Units, No Panel Upgrade Needed
+                                <span class="bg-strip"></span>
+                            </h1>
+                            <div class="overflow-wrapper">
+                                <p class="hero__subTitle mt-2">
+                                    From EV chargers to dryers, simpleSwitch makes it easy to add high-demand appliances in every multi-family unit, with automatic billing and load management.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero__banner mt--3 mt--sm--5 mt--lg--8">
-                <figure class="fade-in">
-                    <img src="./assets/images/ev-charging/banner.png" alt="" class="img-fluid" loading="lazy">
-                </figure>
+            <div class="hero__banner mt--3 mt--sm--5 mt--lg--7 mt--xxl--9 overflow-wrapper">
+                <video  class="img-fluid" autoplay loop muted preload="none">
+                    <source src="../assets/videos/ev-charging-banner.mp4" type="video/mp4" />
+                </video>
             </div>
         </section>
         <!-- Hero Section End -->
 
         <!-- Overiew Switch Section Start -->
-         <section class="overview pt--4 pt--lg--6 bg-colored relative">
+         <section class="overview bg-colored relative">
             <div class="page-container">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-sm-11 col-md-10 col-lg-8 col-xxl-6 mx-auto">
                         <div class="section-header">
                             <h2 class="section-title fade-in">Effortless EV Charging Without Electrical Upgrades</h2>
@@ -253,56 +303,67 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row py--3 pt--sm--5 pt--md--7 pt--lg--9">
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash-green.svg" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/applications/icon-1.svg" alt="" class="img-fluid" loading="lazy">
                         </figure>
-                        <h3 class="fade-in-up mt--1">Cost Savings</h3>
+                        <h3 class="fade-in-up mt--1">No Panel Upgrades</h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up">
-                                Skip the expensive panel upgrades and save thousands.
+                            Add heavy appliances to each unit without expanding your building’s main electrical panel.
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 mt--2 mt-sm-0">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash-green.svg" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/applications/Icon-2.svg" alt="" class="img-fluid" loading="lazy">
                         </figure>
-                        <h3 class="fade-in-up mt--1">Hassle-Free Setup</h3>
+                        <h3 class="fade-in-up mt--1">Cost Savings</h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up">
-                                Simple installation with no additional wiring or complex configurations required.
+                                Avoid the high expenses of complex electrical work and panel reconfiguration.
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 mt--2 mt-md-0">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash-green.svg" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/applications/icon-3.svg" alt="" class="img-fluid" loading="lazy">
                         </figure>
-                        <h3 class="fade-in-up mt--1">Continuous Charging</h3>
+                        <h3 class="fade-in-up mt--1">Simple Installation</h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up">
-                                Ensures your EV gets charged without interruption, even when other high-power appliances are in use.
+                                Quick and easy installation connects simpleSwitch to each tenant’s meter, minimizing setup time and disruption.
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 mt--2 mt-lg-0">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash-green.svg" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/applications/icon-4.svg" alt="" class="img-fluid" loading="lazy">
                         </figure>
-                        <h3 class="fade-in-up mt--1">Environmentally Friendly</h3>
+                        <h3 class="fade-in-up mt--1">Safe, Efficient Power Management</h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up">
-                                Efficient energy management reduces your overall power consumption.
+                                Balances energy usage between appliances to prevent overload and maximize efficiency.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt--2 mt--lg--3">
+                        <figure class="fade-in">
+                            <img src="../assets/icons/applications/automated.svg" alt="" class="img-fluid" loading="lazy">
+                        </figure>
+                        <h3 class="fade-in-up mt--1">Automated Tenant Billing</h3>
+                        <div class="overflow-wrapper">
+                            <p class="mt-2 fade-in-up">
+                                Tracks and bills each tenant’s energy use directly, simplifying property management.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <figure class="fade-in simpleSwitch-fig">
-                <img src="./assets/images/what-simpleSwitch/simpleSwitch.png" alt="" class="img-fluid mx-auto" loading="lazy">
+            <figure class="fade-in simpleSwitch-fig img-reveal">
+                <img src="../assets/images/what-simpleSwitch/simpleSwitch.png" alt="" class="img-fluid mx-auto" loading="lazy">
             </figure>
          </section>
         <!-- Overiew Switch Section End -->
@@ -311,69 +372,30 @@
          <section class="effortless mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
             <div class="page-container">
                 <div class="section-header">
-                    <h2 class="section-title fade-in">How simpleSwitch Makes EV Charging Easy</h2>
+                    <h2 class="section-title fade-in px--xl--3 px--xxl--5">How it works</h2>
                     <div class="overflow-wrapper">
                         <p class="fade-in-up mt-2 px--xl--3 px--xxl--6">
-                            Our smart technology monitors energy usage in real time, balancing power across your home without disruptions.
+                            Discover how simpleSwitch balances your home’s electrical load, ensuring efficient and uninterrupted EV charging.
                         </p>
                     </div>
                 </div>
-                <div class="row mt--3 mt--md--5 mt--xl--6 align-items-center">
-                    <div class="col-sm-6 col-lg-6">
-                        <figure class="fade-in">
-                            <img src="./assets/images/what-simpleSwitch/how-work-1.png" alt="" class="img-fluid" loading="lazy">
-                        </figure>
-                    </div>
-                    <div class="col-sm-6 col-lg-5 offset-lg-1 mt--3 mt-sm-0">
-                        <ul class="effortless__list list-none">
-                            <li class="overflow-wrapper">
-                                <figure class="fade-in-up">
-                                    <img src="./assets/images/flash-blue.svg" alt="" class="img-fluid" loading="lazy">
-                                </figure>
-                                <div class="effortless__content">
-                                    <h3 class="fade-in-up">Real-Time Monitoring</h3>
-                                    <p class="mt-2 fade-in-up pr--xxl--2">
-                                        simpleSwitch tracks energy consumption continuously, ensuring optimal power distribution across all connected appliances.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="overflow-wrapper mt--2 mt--sm--3 mt--lg--4">
-                                <figure class="fade-in-up">
-                                    <img src="./assets/images/flash-blue.svg" alt="" class="img-fluid" loading="lazy">
-                                </figure>
-                                <div class="effortless__content">
-                                    <h3 class="fade-in-up">Automatic Load Management</h3>
-                                    <p class="mt-2 fade-in-up pr--xxl--2">
-                                        If too many appliances are running, SimpleSwitch temporarily prioritizes essential ones without disrupting power to your entire home.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="overflow-wrapper mt--2 mt--sm--3 mt--lg--4">
-                                <figure class="fade-in-up">
-                                    <img src="./assets/images/flash-blue.svg" alt="" class="img-fluid" loading="lazy">
-                                </figure>
-                                <div class="effortless__content">
-                                    <h3 class="fade-in-up">Reconnection</h3>
-                                    <p class="mt-2 fade-in-up pr--xxl--2">
-                                        Once the demand drops, your EV charger reconnects automatically to resume charging.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="video-wrapper mt--3 mt--md--5 mt--xl--6">
+                    <video class="img-fluid" autoplay loop muted preload="none">
+                        <source src="../assets/videos/what-is-simpleSwitch.mp4" type="video/mp4"  />
+                    </video>
+                </div>            
             </div>
          </section>
         <!-- Effortless Section End -->
 
 
         <!-- Optimized Section Start -->
-         <section class="optimized bg--primary bg-colored  mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
-            <div class="page-container py--4 py--sm--6 py--md--8 py--xl--10">
+         <section class="optimized bg--primary bg-colored  mt--6 mt--md--8 mt--lg--10 mt--xxl--12 d-none">
+            <div class="page-container py--5 py--sm--6 py--md--8 py--xl--10">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <figure class="fade-in mb--1">
-                            <img src="./assets/images/electric-panel.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/electric-panel.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <h3 class="fade-in-up">Full Compatibility</h3>
                         <div class="overflow-wrapper">
@@ -382,9 +404,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4  mt--3 mt-sm-0">
                         <figure class="fade-in mb--1">
-                            <img src="./assets/images/energy-saving.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/energy-saving.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <h3 class="fade-in-up">Energy Efficiency</h3>
                         <div class="overflow-wrapper">
@@ -393,9 +415,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4  mt--3 mt-md-0">
                         <figure class="fade-in mb--1">
-                            <img src="./assets/images/energy-system.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/energy-system.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <h3 class="fade-in-up">Smart Load Management</h3>
                         <div class="overflow-wrapper">
@@ -410,106 +432,119 @@
         <!-- Optimized Section End -->
 
         <!-- Works Section Start -->
-         <section class="works mt--6 mt--md--8 mt--lg--10 mt--xxl--12  overflow-hidden fade-in">
+        <section class="works mt--6 mt--md--8 mt--lg--10 mt--xxl--12  overflow-hidden fade-in">
             <div class="page-container page-container--ml">
                 <div class="row">
-                    <div class="col-md-8 col-lg-7 col-xl-5 mx-auto">
-                        <div class="section-header">
-                            <h2 class="section-title fade-in">Set Up simpleSwitch in Just 3 simple Steps</h2>
+                    <div class="col-sm-10 col-md-8 col-lg-7 col-xxl-6 mx-auto-center">
+                        <div class="section-heade">
+                            <h2 class="section-title fade-in">How <span class="tt-initial">simpleSwitch</span>Powers Heavy Appliances in Multi-Unit Properties</h2>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up mt-2 section-subTitle">
-                                    Our smart technology monitors energy usage in real time, balancing 
-                                    power across your home without disruptions.
+                                    See how simpleSwitch handles high-demand devices for each unit, ensuring safe, efficient power distribution throughout your building.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mt--3 mt--md--5 mt--lg--7">
-                    <div class="col-xl-6 col-xxl-5 py--4">
-                        <div class="steps section-p">
-                            <ul class="steps__list list-none">
+                    <div class="col-xl-6 col-xxl-5 py--xl--4">
+                        <div class="steps pr--xl--4 pr--xxl--8">
+                            <ul class="steps__list steps__list--ev list-none">
                                 <li class="steps__item">
                                     <div class="steps__number-wrapper">
-                                        <span class="steps__number txt-primary">1</span>
-                                        <!-- <span class="d-flex">
+                                        <span class="steps__number">1</span>
+                                        <span class="d-flex">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#fff"/>
-                                              </svg>                                              
-                                        </span> -->
+                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#000"/>
+                                            </svg>                                              
+                                        </span>
                                     </div>
                                     <div class="steps__content">
-                                        <h6 class="fade-in-up ff-bold">Install simpleSwitch by your electrical panel.</h6>
+                                        <h5 class="fade-in-up ff-bold">Install</h5>
                                         <div class="overflow-wrapper">
                                             <p class="mt-2 fade-in-up">
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                                              simpleSwitch connects directly to each tenant’s meter, avoiding the need for complex rewiring or panel expansion.
                                             </p>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="steps__item mt--3">
+                                <li class="steps__item mt--3 mt--xl--2 mt--xxl--3">
                                     <div class="steps__number-wrapper">
-                                        <span class="steps__number txt-primary">2</span>
-                                        <!-- <span class="d-flex">
+                                        <span class="steps__number">2</span>
+                                        <span class="d-flex">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#fff"/>
+                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#000"/>
                                               </svg>                                              
-                                        </span> -->
+                                        </span>
                                     </div>
                                     <div class="steps__content">
-                                        <h6 class="fade-in-up ff-bold">Connect Your EV Charger</h6>
+                                        <h5 class="fade-in-up ff-bold">Monitor</h5>
                                         <div class="overflow-wrapper">
                                             <p class="mt-2 fade-in-up">
-                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                                                Real-time energy tracking maintains safe consumption levels, optimizing power use across all units.
                                             </p>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="steps__item mt--3">
+                                <li class="steps__item mt--3 mt--xl--2 mt--xxl--3">
                                     <div class="steps__number-wrapper">
-                                        <span class="steps__number txt-primary">3</span>
-                                        <!-- <span class="d-flex">
+                                        <span class="steps__number">3</span>
+                                        <span class="d-flex">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#fff"/>
+                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#000"/>
                                               </svg>                                              
-                                        </span> -->
+                                        </span>
                                     </div>
                                     <div class="steps__content">
-                                        <h6 class="fade-in-up ff-bold">Let simpleSwitch manage power without upgrades</h6>
+                                        <h5 class="fade-in-up ff-bold">Prioritize</h5>
                                         <div class="overflow-wrapper">
                                             <p class="mt-2 fade-in-up">
-                                                Adjust power sharing settings to suit your needs, from homes to commercial spaces.
+                                                When a primary appliance, such as a dryer, is running, simpleSwitch temporarily pauses secondary devices to manage load effectively.
                                             </p>
-                                            <!-- <span class="d-flex align-items-center">
-                                                <a href="#" class="btn"> Download Guide on </a>
-                                                <span>how to install a simpleSwitch</span>
-                                            </span> -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="steps__item mt--3 mt--xl--2 mt--xxl--3">
+                                    <div class="steps__number-wrapper">
+                                        <span class="steps__number steps__number--hom">4</span>
+                                        <span class="d-flex">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+                                                <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,14H0Z" transform="translate(14) rotate(90)" fill="#000"/>
+                                              </svg>                                              
+                                        </span>
+                                    </div>
+                                    <div class="steps__content">
+                                        <h5 class="fade-in-up ff-bold">Resume</h5>
+                                        <div class="overflow-wrapper">
+                                            <p class="mt-2 fade-in-up">
+                                                Once the main appliance shuts off, simpleSwitch restores power to secondary devices automatically, keeping operations seamless.
+                                            </p>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-xxl-7 relative">
-                        <figure class="fade-in">
-                            <img src="./assets/images/dave-graves-3.png" alt="" class="img-fluid" loading="lazy">
+                    <div class="col-xl-6 col-xxl-7 relative mt--3 mt-xl-0">
+                        <figure class="fade-in relative">
+                            <img src="../assets/images/dave-graves-2.png" alt="" class="img-fluid" loading="lazy">
+                            <div class="play-btn-wrapper fade-in-up">
+                                <button class="play-btn">
+                                    <span class="d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24">
+                                            <path d="M320-200v-560l440 280-440 280Z" fill="#000000"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <p class="play-text mt--1 txt-white">Play Now</p>
+                            </div>
+                            <div class="co-founder-card fade-in-up ml--lg--2">
+                                <h3 class="fade-in ">Dave Graves</h3>
+                                <p class="fade-in-up mt-1">
+                                    <em>Electrician and Co-Inventor of simpleSwitch</em>
+                                </p>
+                            </div>
                         </figure>
-                        <div class="play-btn-wrapper fade-in-up">
-                            <button class="play-btn">
-                                <span class="d-flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24">
-                                        <path d="M320-200v-560l440 280-440 280Z" fill="#000000"/>
-                                    </svg>
-                                </span>
-                            </button>
-                            <p class="play-text mt--1 txt-white">Play Now</p>
-                        </div>
-                        <div class="co-founder-card fade-in-up ml--lg--2">
-                            <h3 class="fade-in ">Dave Graves</h3>
-                            <p class="fade-in-up mt-1">
-                                <em>Electrician and Co-Inventor of simpleSwitch</em>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -517,23 +552,23 @@
         <!-- Works Section End -->
 
         <!-- Power Management Section Start -->
-         <section class="power-management power-management--ev  mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
+         <section class="power-management power-management--multi  mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
             <div class="page-container">
                 <div class="row">
                     <div class="col-md-8 col-lg-6 power-management__wrapper">
                         <div class="power-management-content">
-                            <h2 class="fade-in txt-white pr--xl--3 pr--xxl--9">
-                                Costly Electrical Utility Upgrades? No Need
+                            <h2 class="fade-in txt-white ">
+                                Modernize Units without the Complexity
                             </h2>
                             <div class="overflow-wrapper">
                                 <p class="mt-2 fade-in-up txt-white section-p">
-                                    With simpleSwitch, save between $3,000 to $20,000 by avoiding costly electrical panel upgrades, which can take months to complete.
+                                    With simpleSwitch, you can offer tenants access to high-demand appliances, like EV chargers and dryers, without the hassle of extensive electrical upgrades. Each unit can now safely support powerful devices with ease, keeping installation and billing simple.
                                 </p>
                             </div>
                             <div class="btn-wrapper mt--2">
                                 <div class="fade-in-up">
-                                    <a href="#" class="btn btn--primary">
-                                        Buy simpleSwitch
+                                    <a href="../product.html" class="btn btn--primary">
+                                        <span class="">Power up with simpleSwitch</span>
                                     </a>
                                 </div>
                             </div>
@@ -545,7 +580,7 @@
         <!-- Power Management Section End -->
    
         <!-- Secure Section Start -->
-         <section class="secure py--4 py--md--6 py--xl--8 bg--primary bg-colored">
+         <!-- <section class="secure py--4 py--md--6 py--xl--8 bg--primary bg-colored">
             <div class="page-container">
                 <div class="row">
                     <div class="col-sm-10 col-md-5 col-lg-5 offset-xl-1">
@@ -559,21 +594,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt--3 mt--sm--5 mt--md--7 mt--lg--9">
+                <div class="row mt--3 mt--sm--5 mt--md--7 mt--lg--9 counter-section">
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="secure__content-wrapper">
                             <figure class="fade-in mb--2">
-                                <img src="./assets/images/low-price.png" alt="" class="img-fluid mx-auto" loading="lazy">
+                                <img src="../assets/images/low-price.png" alt="" class="img-fluid mx-auto" loading="lazy">
                             </figure>
                             <div class="counter">
                                 <div class="counter__wrapper">
                                     <span class="counter-prefix">$</span>
-                                    <span class="counter-value">3</span>
+                                    <span class="count-value" data-target="3">0</span>
                                     <span class="counter-suffix">k</span>
                                 </div>
                                 <span>-</span>
                                 <div class="counter__wrapper">
-                                    <span class="counter-value">20</span>
+                                    <span class="count-value" data-target="20">0</span>
                                     <span class="counter-suffix">k</span>
                                 </div>
                             </div>
@@ -587,15 +622,15 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 mt--2 mt-sm-0">
                         <div class="secure__content-wrapper">
                             <figure class="fade-in mb--2">
-                                <img src="./assets/images/hourglass.png" alt="" class="img-fluid mx-auto" loading="lazy">
+                                <img src="../assets/images/hourglass.png" alt="" class="img-fluid mx-auto" loading="lazy">
                             </figure>
                             <div class="counter">
                                 <div class="counter__wrapper">
-                                    <span class="counter-value">3</span>
+                                    <span class="count-value" data-target="3">0</span>
                                 </div>
                                 <span>-</span>
                                 <div class="counter__wrapper">
-                                    <span class="counter-value">9</span>
+                                    <span class="count-value" data-target="9">0</span>
                                     <span class="counter-suffix">months</span>
                                 </div>
                             </div>
@@ -609,11 +644,11 @@
                     <div class="col-sm-6 col-md-4 col-lg-4 mt--2 mt-md-0">
                         <div class="secure__content-wrapper">
                             <figure class="fade-in mb--2">
-                                <img src="./assets/images/flash-green.png" alt="" class="img-fluid mx-auto" loading="lazy">
+                                <img src="../assets/images/flash-green.png" alt="" class="img-fluid mx-auto" loading="lazy">
                             </figure>
                             <div class="counter">
                                 <div class="counter__wrapper">
-                                    <span class="counter-value">600</span>
+                                    <span class="count-value" data-target="600">0</span>
                                     <span class="counter-suffix">Amps</span>
                                 </div>
                             </div>
@@ -626,16 +661,11 @@
                     </div>
                 </div>
             </div>
-            <div class="custom-shape-divider-bottom-1729077812">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
-                </svg>
-            </div>
-         </section>
+         </section> -->
         <!-- Secure Section End-->
         
         <!-- Testimonials Section Start -->
-         <section class="testimonials mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
+        <section class="testimonials mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
             <div class="page-container">
                 <div class="row">
                     <div class="col-lg-6 col-xl-5 mx-auto-center">
@@ -666,27 +696,58 @@
                 <div class="swiper swiper-testimonials mt--1 mt--sm--2 mt--lg--4 mt--xxl--6">
                     <div class="swiper-wrapper py--1">
                         <div class="swiper-slide">
-                            <div class="testimonials__card">
+                            <div class="testimonials__card fade-in">
                                 <figure class="fade-in">
-                                    <img src="./assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
+                                    <img src="../assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
                                 </figure>
                                 <div class="testimonials__card-body">
                                     <h3 class="fade-in-up ff-medium mt-2">
-                                        EV Chargin Stations for Duplexes
+                                        Reliable Load-Sharing with <span class="tt-initial">simpleSwitch</span>
                                     </h3>
                                     <div class="overflow-wrapper">
                                         <p class="fade-in-up mt-2 section-p">
-                                            “I have a duplex in Salem with an underground feed. It is very difficult to add more power from the utility. I was planning to add chargers but the 
+                                            "simpleSwitch has been a reliable, safe load-sharing solution for our electrical company, simplifying complex jobs. Their team provides excellent support, custom builds, and timely shipping. Highly recommended for load-sharing projects."
                                         </p>
                                     </div>
                                 </div>
                                 <div class="testimonials__card-footer mt--2">
                                     <figure class="fade-in">
-                                        <img src="./assets" alt="" class="img-fluid" loading="lazy">
+                                        <img src="../assets" alt="" class="img-fluid" loading="lazy">
                                     </figure>
                                     <div class="testimonials__details">
                                         <span class="testimoner-name">
-                                            <strong><em>Solem Duplex</em></strong>
+                                            <strong><em>Chad R.</em></strong>
+                                        </span>
+                                        <span class="testimoner-state mt-0">
+                                            <em>Connected Technology</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials__card fade-in">
+                                <figure class="fade-in">
+                                    <img src="../assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
+                                </figure>
+                                <div class="testimonials__card-body">
+                                    <h3 class="fade-in-up ff-medium mt-2">
+                                        Add New Appliances Without Panel Space
+                                    </h3>
+                                    <div class="overflow-wrapper">
+                                        <p class="fade-in-up mt-2 section-p">
+                                            “I added a 10,000-watt heater without panel space or costly upgrades. simpleSwitch used existing breaker space, avoiding a $9,000 heat pump. Installation took just a few hours."
+                                        
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="testimonials__card-footer mt--2">
+                                    <figure class="fade-in">
+                                        <img src="../assets" alt="" class="img-fluid" loading="lazy">
+                                    </figure>
+                                    <div class="testimonials__details">
+                                        <span class="testimoner-name">
+                                            <strong><em>Eric S.</em></strong>
                                         </span>
                                         <span class="testimoner-state mt-0">
                                             <em>State</em>
@@ -696,27 +757,27 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="testimonials__card">
+                            <div class="testimonials__card fade-in">
                                 <figure class="fade-in">
-                                    <img src="./assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
+                                    <img src="../assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
                                 </figure>
                                 <div class="testimonials__card-body">
                                     <h3 class="fade-in-up ff-medium mt-2">
-                                        EV Chargin Stations for Duplexes
+                                        Save Money On Electrical
                                     </h3>
                                     <div class="overflow-wrapper">
                                         <p class="fade-in-up mt-2 section-p">
-                                            “I have a duplex in Salem with an underground feed. It is very difficult to add more power from the utility. I was planning to add chargers but the 
+                                            “Even with space in my panel, simpleSwitch saved me thousands by avoiding wall renovations for adding a washer and dryer. Its easy installation near the source reduced cost and effort."                                   
                                         </p>
                                     </div>
                                 </div>
                                 <div class="testimonials__card-footer mt--2">
                                     <figure class="fade-in">
-                                        <img src="./assets" alt="" class="img-fluid" loading="lazy">
+                                        <img src="../assets" alt="" class="img-fluid" loading="lazy">
                                     </figure>
                                     <div class="testimonials__details">
                                         <span class="testimoner-name">
-                                            <strong><em>Solem Duplex</em></strong>
+                                            <strong><em>Scott B.</em></strong>
                                         </span>
                                         <span class="testimoner-state mt-0">
                                             <em>State</em>
@@ -726,117 +787,27 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="testimonials__card">
+                            <div class="testimonials__card fade-in">
                                 <figure class="fade-in">
-                                    <img src="./assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
+                                    <img src="../assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
                                 </figure>
                                 <div class="testimonials__card-body">
                                     <h3 class="fade-in-up ff-medium mt-2">
-                                        EV Chargin Stations for Duplexes
+                                        EV Charging Stations for Duplexes
                                     </h3>
                                     <div class="overflow-wrapper">
                                         <p class="fade-in-up mt-2 section-p">
-                                            “I have a duplex in Salem with an underground feed. It is very difficult to add more power from the utility. I was planning to add chargers but the 
+                                            “I installed EV chargers in my Salem duplex using existing range circuits, avoiding costly upgrades and lawn damage. Tenants were happy, and costs were low."                                   
                                         </p>
                                     </div>
                                 </div>
                                 <div class="testimonials__card-footer mt--2">
                                     <figure class="fade-in">
-                                        <img src="./assets" alt="" class="img-fluid" loading="lazy">
+                                        <img src="../assets" alt="" class="img-fluid" loading="lazy">
                                     </figure>
                                     <div class="testimonials__details">
                                         <span class="testimoner-name">
-                                            <strong><em>Solem Duplex</em></strong>
-                                        </span>
-                                        <span class="testimoner-state mt-0">
-                                            <em>State</em>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonials__card">
-                                <figure class="fade-in">
-                                    <img src="./assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
-                                </figure>
-                                <div class="testimonials__card-body">
-                                    <h3 class="fade-in-up ff-medium mt-2">
-                                        EV Chargin Stations for Duplexes
-                                    </h3>
-                                    <div class="overflow-wrapper">
-                                        <p class="fade-in-up mt-2 section-p">
-                                            “I have a duplex in Salem with an underground feed. It is very difficult to add more power from the utility. I was planning to add chargers but the 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="testimonials__card-footer mt--2">
-                                    <figure class="fade-in">
-                                        <img src="./assets" alt="" class="img-fluid" loading="lazy">
-                                    </figure>
-                                    <div class="testimonials__details">
-                                        <span class="testimoner-name">
-                                            <strong><em>Solem Duplex</em></strong>
-                                        </span>
-                                        <span class="testimoner-state mt-0">
-                                            <em>State</em>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonials__card">
-                                <figure class="fade-in">
-                                    <img src="./assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
-                                </figure>
-                                <div class="testimonials__card-body">
-                                    <h3 class="fade-in-up ff-medium mt-2">
-                                        EV Chargin Stations for Duplexes
-                                    </h3>
-                                    <div class="overflow-wrapper">
-                                        <p class="fade-in-up mt-2 section-p">
-                                            “I have a duplex in Salem with an underground feed. It is very difficult to add more power from the utility. I was planning to add chargers but the 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="testimonials__card-footer mt--2">
-                                    <figure class="fade-in">
-                                        <img src="./assets" alt="" class="img-fluid" loading="lazy">
-                                    </figure>
-                                    <div class="testimonials__details">
-                                        <span class="testimoner-name">
-                                            <strong><em>Solem Duplex</em></strong>
-                                        </span>
-                                        <span class="testimoner-state mt-0">
-                                            <em>State</em>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonials__card">
-                                <figure class="fade-in">
-                                    <img src="./assets/icons/rating-stars.svg" alt="" class="img-fluid" loading="lazy">
-                                </figure>
-                                <div class="testimonials__card-body">
-                                    <h3 class="fade-in-up ff-medium mt-2">
-                                        EV Chargin Stations for Duplexes
-                                    </h3>
-                                    <div class="overflow-wrapper">
-                                        <p class="fade-in-up mt-2 section-p">
-                                            “I have a duplex in Salem with an underground feed. It is very difficult to add more power from the utility. I was planning to add chargers but the 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="testimonials__card-footer mt--2">
-                                    <figure class="fade-in">
-                                        <img src="./assets" alt="" class="img-fluid" loading="lazy">
-                                    </figure>
-                                    <div class="testimonials__details">
-                                        <span class="testimoner-name">
-                                            <strong><em>Solem Duplex</em></strong>
+                                            <strong><em>Salem Duplex</em></strong>
                                         </span>
                                         <span class="testimoner-state mt-0">
                                             <em>State</em>
@@ -849,7 +820,7 @@
                 </div>
 
             </div>
-         </section>
+        </section>
         <!-- Testimonials Section End -->
 
         <!-- Quick Questions Section Start -->
@@ -858,7 +829,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-5 col-xxl-4 mx-auto-center">
                         <div class="section-header">
-                            <h2 class="fade-in"> Quick Answers To Common Questions</h2>
+                            <h2 class="fade-in">Quick Answers To Common Questions</h2>
                         </div>
                     </div>
                 </div>
@@ -866,26 +837,27 @@
                 <div class="row mt--3 mt--md--4 mt--lg--5 mt--xxl--8 pb--3 pb--md--5 pb--xl--6">
                     <div class="col-lg-6 quick-questions__wrapper">
                         <figure class="fade-in">
-                            <img src="./assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <div class="quick-question__content">
-                            <h3 class="fade-in ff-medium mt--lg--1">Guide to adding appliances with simpleSwitch</h3>
+                            <h3 class="fade-in ff-medium mt--lg--1"> Can Tenants Add Heavy Appliances Without a Central Panel Upgrade?
+                            </h3>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up mt--1 section-p">
-                                    With SimpleSwitch, adding appliances is quick and easy. Connect your device, open the app, and follow the intuitive setup process to control your appliances with a tap. Simplify home automation effortlessly.
+                                    Yes! simpleSwitch enables tenants to add appliances like dryers, steam showers, and EV chargers without upgrading the building’s main panel. It manages load by connecting directly to each unit’s meter.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 quick-questions__wrapper mt--3 mt--md--3 mt-lg-0">
                         <figure class="fade-in">
-                            <img src="./assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <div class="quick-question__content">
-                            <h3 class="fade-in ff-medium mt--lg--1">Is Professional Installation Required for simpleSwitch?</h3>
+                            <h3 class="fade-in ff-medium mt--lg--1">How Does <span class="tt-initial">simpleSwitch</span> Help Save on Installation Costs?</h3>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up mt--1 section-p">
-                                    SimpleSwitch is designed for easy, DIY installation. Most users can set it up without professional help by following the step-by-step guide. However, for more complex setups, professional assistance is recommended.
+                                    simpleSwitch uses your existing setup, avoiding the need for central panel expansions and reducing costs related to complex electrical work.
                                 </p>
                             </div>
                         </div>
@@ -896,56 +868,26 @@
                 <div class="row mt--3 mt--md--4 mt--lg--5 mt--xxl--8 pb--3 pb--md--5 pb--xl--6">
                     <div class="col-lg-6 quick-questions__wrapper">
                         <figure class="fade-in">
-                            <img src="./assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <div class="quick-question__content">
-                            <h3 class="fade-in ff-medium mt--lg--1">Guide to adding EV chargers with simpleSwitch </h3>
+                            <h3 class="fade-in ff-medium mt--lg--1">Does<span class="tt-initial">simpleSwitch</span>Simple Switch Support EV Charging for Multi-Family Properties?</h3>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up mt--1 section-p">
-                                    Adding EV chargers with SimpleSwitch is simple and convenient. Connect the charger to your home power supply, pair it with the SimpleSwitch app, and follow the on-screen instructions to manage and monitor charging easily.
+                                    Yes, simpleSwitch makes EV charging available to each unit, managing load and enabling individual billing, so tenants can conveniently charge their vehicles without extra infrastructure.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 quick-questions__wrapper mt--3 mt--md--3 mt-lg-0">
                         <figure class="fade-in">
-                            <img src="./assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <div class="quick-question__content">
-                            <h3 class="fade-in ff-medium mt--lg--1">What Appliances Can I Add Using simpleSwitch?</h3>
+                            <h3 class="fade-in ff-medium mt--lg--1">How Is Tenant Billing Handled?</h3>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up mt--1 section-p">
-                                    With SimpleSwitch, you can add a variety of appliances, including lights, fans, air conditioners, heaters, and home entertainment systems. It supports most smart home devices, offering seamless control and automation.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="divider divider--white"></div>
-
-                <div class="row mt--3 mt--md--4 mt--lg--5 mt--xxl--8">
-                    <div class="col-lg-6 quick-questions__wrapper">
-                        <figure class="fade-in">
-                            <img src="./assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
-                        </figure>
-                        <div class="quick-question__content">
-                            <h3 class="fade-in ff-medium mt--lg--1">How to configure and use simpleSwitch</h3>
-                            <div class="overflow-wrapper">
-                                <p class="fade-in-up mt--1 section-p">
-                                    To configure SimpleSwitch, install the app, connect your appliance, and follow the setup steps to pair via Bluetooth or Wi-Fi. Control, schedule, and monitor appliances from the app for seamless management and energy savings.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 quick-questions__wrapper mt--3 mt--md--3 mt-lg-0">
-                        <figure class="fade-in">
-                            <img src="./assets/icons/flash.png" alt="" class="img-fluid" loading="lazy">
-                        </figure>
-                        <div class="quick-question__content">
-                            <h3 class="fade-in ff-medium mt--lg--1">How Does simpleSwitch Help Save on Energy Costs?</h3>
-                            <div class="overflow-wrapper">
-                                <p class="fade-in-up mt--1 section-p">
-                                    SimpleSwitch helps save on energy costs by allowing you to control appliances remotely, schedule usage, and monitor energy consumption in real-time. By automating power management, it reduces unnecessary energy waste, optimizing efficiency.
+                                    simpleSwitch tracks each tenant’s energy use separately, automatically billing them for individual appliance use and simplifying management tasks for property owners.
                                 </p>
                             </div>
                         </div>
@@ -960,14 +902,14 @@
         <!-- Resources Section Start -->
          <Section class="resources mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
             <div class="page-container">
-                <h2 class="fade-in">Resources For simpleSwitch</h2>
+                <h2 class="fade-in">Resources For <span class="tt-initial">simpleSwitch</span></h2>
                 <div class="row mt--2 mt--sm--3 mt--md--4">
                     <div class="col-sm-6 col-lg-4">
                         <figure class="fade-in">
-                            <img src="./assets/images/power-charger-isolated.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/power-charger-isolated.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <h3 class="fade-in mt-4 ff-medium">
-                            Guide To Adding EV Chargers With simpleSwitch
+                            Guide To Adding EV Chargers With <span class="tt-initial">simpleSwitch</span>
                         </h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up pr--xl--2 pr--xxl--4">
@@ -984,10 +926,10 @@
                     </div>
                     <div class="col-sm-6 col-lg-4 mt--3 mt-sm-0">
                         <figure class="fade-in">
-                            <img src="./assets/images/heat-pump-outside-home.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/heat-pump-outside-home.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <h3 class="fade-in mt-4 ff-medium">
-                            Guide To Adding Electrical Appliances With simpleSwitch
+                            Guide To Adding Electrical Appliances With <span class="tt-initial">simpleSwitch</span>
                         </h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up pr--xl--2 pr--xxl--4">
@@ -1004,10 +946,10 @@
                     </div>
                     <div class="col-sm-6 col-lg-4 mt--3 mt-lg-0">
                         <figure class="fade-in">
-                            <img src="./assets/images/confirgure-simpleSwitch.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/confirgure-simpleSwitch.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                         <h3 class="fade-in mt-4 ff-medium">
-                            How To Configure And Use simpleSwitch
+                            How To Configure And Use <span class="tt-initial">simpleSwitch</span>
                         </h3>
                         <div class="overflow-wrapper">
                             <p class="mt-2 fade-in-up pr--xl--2 pr--xxl--4">
@@ -1042,15 +984,17 @@
                                 </p>
                             </div>
                             <div class="btn-wrapper mt--2">
-                                <a href="#" class="btn btn--primary">
-                                    Buy simpleSwitch
-                                </a>
+                                <div class="fade-in-up">
+                                    <a href="../product.html" class="btn btn--primary">
+                                        <span class="">Power up with simpleSwitch</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xxl-5 offset-xl-1">
                         <figure class="fade-in">
-                            <img src="./assets/images/ev-charging-car-vehicle-wheel.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="../assets/images/ev-charging-car-vehicle-wheel.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                     </div>
                 </div>
@@ -1059,7 +1003,7 @@
         <!-- Customizable Section End -->
 
         <!-- CTA Section Start -->
-         <section class="cta py--4 py--md--6 py--xl--10 bg--primary bg-colored">
+        <section class="cta py--4 py--md--6 py--xl--10 bg--primary bg-colored">
             <div class="page-container">
                 <div class="row">
                     <div class="col-sm-10 col-lg-8 mx-auto-center">
@@ -1073,12 +1017,10 @@
                                         <div class="form__group footer-form-group">
                                             <input type="email" id="email" name="email" placeholder="" class="form__control footer-form-control" autocomplete="off"  required>
                                             <label for="name" class="form__label">Email Address</label>
-                                        </div>
-                                        <button class="btn btn--primary" id="cta-submit-btn">
-                                            <span>Submit</span>
-                                        </button>
+                                        </div>                      
+                                        <input class="btn btn--submit" value="Submit" type="submit">
                                     </div>
-                                    <small class="mt-2 fade-in-up ff-14"><em>*Get Early Access To Offers And Discount Coupons</em></small>
+                                    <!-- <small class="mt-2 fade-in-up ff-14"><em>*Get Early Access To Offers And Discount Coupons</em></small> -->
                                 </form>
                             </div>
                         </div>
@@ -1087,9 +1029,8 @@
             </div>
          </section>
         <!-- CTA Section End -->
-
         <!--======= Video Popup Start ========= -->
-        <!-- <div class="video__popup-container" id="video-popup-container">
+        <div class="video__popup-container" id="video-popup-container">
             <div class="video__popup-wrapper">
                 <div class="video__popup-close" id="video-popup-close" area-label="close" area-control="video-popup-iframe-container">
                     <span class="">✖</span>
@@ -1098,7 +1039,7 @@
                     <iframe width="100%" height="100%" src="" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>       
             </div>
-        </div> -->
+        </div>
         <!--======= Video Popup End ========= -->
         
     </main>
@@ -1110,107 +1051,100 @@
             <div class="page-container">
                 <div class="divider divider--white"></div>
                 <div class="row py--3 py--md--4 py--lg--5 py--xxl--6">
-                    <div class="col-lg-12 col-xl-4">
-                        <a href="./index.html" class="fade-in d-inline-flex">
-                            <img src="./assets/logos/logo-2.svg" alt="SmartFit's logo" class="img-fluid footer-logo" loading="lazy">
+                    <div class="col-lg-12 col-xl-3">
+                        <a href="../index.html" class="fade-in d-inline-flex">
+                            <img src="../assets/logos/logo-2.svg" alt="SmartFit's logo" class="img-fluid footer-logo" loading="lazy">
                         </a>
                     </div>
-                    <div class="col-md-8 col-lg-6 col-xl-4 mt--2 mt--md--3 mt-xl-0">
-                        <div class="row">
-                            <div class="col-sm-11">
+                    <div class="col-sm-11 col-md-8 col-lg-6 col-xl-5 mt--2 mt--md--3 mt-xl-0">
+                        <div class="row ml--xl--1">
+                            <div class="col-5 col-sm-12">
                                 <ul class="footer__list list-none overflow-wrapper">
                                     <li class="fade-in-up">
-                                        <a href="./index.html" class="footer__link ">
+                                        <a href="../index.html" class="footer__link ">
                                             <span>Home</span>
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./about.html" class="footer__link ">
+                                        <a href="../about.html" class="footer__link ">
                                             <span>About</span>
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./faqs.html" class="footer__link ">
-                                            <span>FAQs</span>
+                                        <a href="../products.html" class="footer__link ">
+                                            <span>Shop</span>
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./simpleSwitch.html" class="footer__link ">
-                                           <span>simpleSwitch</span>
+                                        <a href="../contact.html" class="footer__link ">
+                                           <span>Contact</span>
                                         </a>
                                     </li>                       
                                 </ul>
                             </div>
-                            <div class="col-sm-11 mt--1 mt--md--1">
+                            <div class="col-7 col-sm-12 mt--sm--1">
                                 <ul class="footer__list list-none overflow-wrapper">
                                     <li class="fade-in-up">
-                                        <a href="./warranty.html" class="footer__link">
-                                            <span>Warranty</span>
+                                        <a href="./ev-charging.html" class="footer__link">
+                                            <span>EV Charger</span>
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./terms.html" class="footer__link">
-                                            <span>Terms</span>
+                                        <a href="./multi-family.html" class="footer__link">
+                                            <span>Multi Family</span>
                                         </a>
-                                    </li>                         
+                                    </li>
                                     <li class="fade-in-up">
-                                        <a href="./return-policy.html" class="footer__link">
-                                            <span>Return policy</span>
+                                        <a href="./heavy-appliances.html" class="footer__link">
+                                            <span>Heavy Appliances</span>
                                         </a>
-                                    </li>                         
+                                    </li>                       
                                     <li class="fade-in-up">
-                                        <a href="./sitemap.html" class="footer__link">
-                                            <span>Sitemap</span>
+                                        <a href="../product.html" class="footer__link">
+                                            <span>Product</span>
                                         </a>
                                     </li>                         
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4 mt--1 mt--sm--2 mt--md--3 mt-xl-0">
+                    <div class="col-lg-6 col-xl-4 mt--2 mt--md--3 mt-xl-0">
                         <ul class="footer__list-right list-none overflow-wrapper">
                             <li class="fade-in-up">
-                                <span class=""><em>Call Us</em></span>
-                                <a href="tel:550-902-1355" class="footer__link" target="_blank">550-902-1355</a>
+                                <span><em>Call Us</em></span>
+                                <a href="tel:550-902-1355" class="footer__link" target="_blank">
+                                    <span>550-902-1355</span>
+                                </a>
                             </li>
                             <li class="fade-in-up">
-                                <span class=""><em>Locate</em></span>
+                                <span><em>Locate</em></span>
                                 <a href="#" class="footer__link ml--0" target="_blank">
-                                   <address class="d-inline-flex">420 N Cleveland St, Memphis, TN, US</address>
+                                   <address class="d-inline-flex">
+                                        <span>420 N Cleveland St, Memphis, TN, US</span>
+                                   </address>
                                 </a>                        
                             </li>   
                             <li class="fade-in-up">
-                                <span class=""><em>Email</em></span>
-                                <a href="mailto:info@simpleswitch.com" class="footer__link link-last" target="_blank">info@simpleswitch.com</a>
+                                <span><em>Email</em></span>
+                                <a href="mailto:info@simpleSwitch.com" class="footer__link link-last" target="_blank">
+                                    <span class="tt-initial">info@simpleSwitch.com</span>
+                                </a>
                             </li>                                                                                          
                         </ul>
                     </div>
-                </div>
-                <div class="divider divider--white"></div>
-            </div>
-        </div>   
 
-        <div class="footer__bottom py--2 py--md--3">
-            <div class="page-container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-xl-6 col-xxl-6 order-2 order-lg-0 mt-4 mt-lg-3 reserved-info-wrapper">
-                        <small class="fade-in-up txt-white mt-0">&copy;2024 B&B Technology Inc. All rights reserved.</small> 
-                        <small class="fade-in-up txt-white mt-0 designed-by-text">
-                            <span class="">Designed By</span> <a href="https://www.yourhustler.com/" class="footer__link">YourHustler</a>
-                        </small>                                        
-                    </div>
-                    <div class="col-lg-6 col-xl-5 offset-xl-1 col-xxl-4 offset-xxl-2 footer__bottom-right">
-                        <div class="app-stores">
+                    <div class="col-12 mt--2 footer__top-bottom">
+                        <div class="app-stores fade-in-up">
                             <figure class="fade-in">
-                                <img src="./assets/images/ul.png" alt="" class="img-fluid" loading="lazy">
+                                <img src="../assets/images/ul.png" alt="" class="img-fluid" loading="lazy">
                             </figure>
                             <figure class="fade-in">
-                                <img src="./assets/images/DIN-logo.png" alt="" class="img-fluid" loading="lazy">
+                                <img src="../assets/images/DIN-logo.png" alt="" class="img-fluid" loading="lazy">
                             </figure>
                         </div>
-                        <ul class="socials-list list-none">
+                        <ul class="socials-list list-none fade-in-up">
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.facebook.com/smartfit" class="socials-link">
+                                <a href="https://www.facebook.com/simpleSwitch" class="socials-link" target="_blank">
                                    <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="18" height="18">
                                             <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#0832FF"/>
@@ -1219,7 +1153,7 @@
                                 </a>
                             </li>
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.instagram.com/smartfit" class="socials-link">
+                                <a href="https://www.instagram.com/simpleSwitch" class="socials-link" target="_blank">
                                     <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18">
                                             <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#0832FF" />
@@ -1228,7 +1162,7 @@
                                 </a>
                             </li>
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.youtube.com/smartfit" class="socials-link">
+                                <a href="https://www.youtube.com/simpleSwitch" class="socials-link" target="_blank">
                                    <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18">
                                             <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" fill="#0832FF"/>
@@ -1237,7 +1171,7 @@
                                 </a>
                             </li>
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.linkedin.com/smartfit" class="socials-link">
+                                <a href="https://www.linkedin.com/simpleSwitch" class="socials-link" target="_blank">
                                    <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.415 18.414">
                                             <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#0832FF"/>
@@ -1247,6 +1181,35 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="divider divider--white"></div>
+            </div>
+        </div>   
+
+        <div class="footer__bottom py--2 py--md--3">
+            <div class="page-container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-xl-6 order-2 order-lg-0 mt-2 mt-lg-0 reserved-info-wrapper">
+                        <small class="fade-in-up txt-white mt-0">&copy;2024 B&B Technology Inc. All rights reserved.</small> 
+                        <small class="fade-in-up txt-white mt-0 designed-by-text">
+                            <span>Designed By</span> <a href="https://www.yourhustler.com/" class="footer__link" target="_blank"><span>YourHustler</span></a>
+                        </small>                                        
+                    </div>
+                    <div class="col-lg-4 col-xl-6">
+                        <ul class="footer__list footer__list--bottom list-none overflow-wrapper">
+                            <li class="fade-in-up">
+                                <a href="../terms-and-conditions.html" class="footer__link">
+                                    <span>Terms & Conditions</span>
+                                </a>
+                            </li>                         
+                            <li class="fade-in-up">
+                                <a href="../return-policy.html" class="footer__link">
+                                    <span>Return policy</span>
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>                
                 </div>
             </div>
         </div>

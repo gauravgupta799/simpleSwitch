@@ -65,24 +65,33 @@ $h4-font-sizes: (
   xxxl :(rem(40), rem(56)),
 );
 
+// $h5-font-sizes: (
+//   null:(rem(22), rem(29)), 
+//   sm :(rem(22), rem(29)),
+//   md :(rem(24), rem(31)),
+//   lg :(rem(24), rem(31)),
+//   xl :(rem(26), rem(34)),
+//   xxl:(rem(26), rem(34)),
+//   xxxl:(rem(28), rem(36)),
+// ); 
+
+
 $h5-font-sizes: (
-  null:(rem(22), rem(29)), 
-  sm :(rem(22), rem(29)),
-  md :(rem(24), rem(31)),
-  lg :(rem(24), rem(31)),
-  xl :(rem(26), rem(34)),
-  xxl:(rem(26), rem(34)),
-  xxxl:(rem(28), rem(36)),
-); 
-
-
-$h6-font-sizes: (
   null: (rem(20), rem(24)),
   sm : (rem(20), rem(24)),
   md : (rem(22), rem(26)),
   lg : (rem(22), rem(26)),
   xl:  (rem(22), rem(28)),
   xxl: (rem(24), rem(28)),
+); 
+
+$h6-font-sizes: (
+  null: (rem(18), rem(22)),
+  sm : (rem(18), rem(22)),
+  md : (rem(18), rem(22)),
+  lg : (rem(20), rem(24)),
+  xl:  (rem(20), rem(24)),
+  xxl: (rem(20), rem(24)),
 ); 
 
 
@@ -150,6 +159,10 @@ h1, h2, h3, h4, h5, h6{
                 transition:fill 0.3s ease;
             }
         }
+    }
+    &::selection{
+        background-color: $clr-white;
+        color:$clr-primary;
     }
 }
 

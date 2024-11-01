@@ -55,6 +55,9 @@
     text-align:right;
 }
 
+.tt-initial{
+    text-transform: initial;
+}
 .uppercase{
     text-transform:uppercase;
 }
@@ -81,6 +84,10 @@
 
 .bg--secondary{
     background: $clr-secondary;
+}
+
+.bg--grey-2{
+    background: $clr-grey-2;
 }
 
 // .bg--tertiary{
@@ -170,12 +177,12 @@
     &--white{
         background:$clr-white;
     }
-    // &--grey{
-    //     background:$clr-grey; 
-    // }
-    // &--secondary{
-    //     background: $clr-secondary;    
-    // }
+    &--grey{
+        background:$clr-grey; 
+    }
+    &--secondary{
+        background: $clr-secondary;    
+    }
 }
 
 

@@ -16,7 +16,7 @@
     <div class="loader-container">
         <div class="loader-wrapper">
             <figure class="">
-                <img src="./assets/logos/logo-1.svg" alt="simpleSwitch's logo" class="img-fluid" loading="lazy">
+                <img src="./assets/logos/logo-2.svg" alt="simpleSwitch's logo" class="img-fluid" loading="lazy">
             </figure>
         </div>
     </div>
@@ -25,6 +25,20 @@
     <!-- Header Start -->
     <header class="header">
         <div class="header-desktop">
+            <div class="header__top bg--primary bg-colored py--1">
+                <div class="page-container">
+                    <div class="row">
+                        <div class="col-6">
+                            <figure class="">
+                                <img src="./assets/images/made-in-america-img.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <span class="fz-14">UL Listed - #E510161</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="page-container">
                 <div class="header__inner-desktop">
                     <!-- Logo-Start -->
@@ -51,15 +65,32 @@
                                 </a>
                             </li>             
                             <li class="nav__list">
-                                <a href="./shop.html" class="nav__link" >
+                                <a href="./products.html" class="nav__link" >
                                     <span>Shop</span>
                                 </a>
                             </li>
-                            <li class="nav__list">
-                                <a href="./what-is-simpleSwitch.html" class="nav__link" >
-                                    <span>What is simpleSwitch</span>
+                            <li class="nav__list subMenu">
+                                <a class="nav__link nav__link--submenu">
+                                    <span>Applications</span>   
+                                    <span class="caret-down-icon mt-0">
+                                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                            <path d="M14 20l10 10 10-10z" fill="#000"></path>
+                                        </svg> 
+                                    </span>
                                 </a>
-                            </li> 
+                                 <!-- Services Submenu -->
+                                 <ul class="subMenu__list list-none" id="submenu-desktop">
+                                    <li>
+                                        <a href="./applications/ev-charging.html" class="subMenu__link">EV Charging</a>
+                                    </li>
+                                    <li>
+                                        <a href="./applications/multi-family.html" class="subMenu__link">Multi Family</a>
+                                    </li>                                         
+                                    <li>
+                                        <a href="./applications/heavy-appliances.html" class="subMenu__link">Heavy Appliances</a>
+                                    </li>                                      
+                                </ul>
+                            </li>               
                             <li class="nav__list">
                                 <a href="./contact.html" class="nav__link" >
                                     <span>Contact</span>
@@ -71,15 +102,15 @@
                
                     <div class="header__right">
                         <div class="header__actions">
-                            <div class="header__signIn">
+                            <!-- <div class="header__signIn header-btn">
                                 <span class="d-flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 29.129 29.129">
                                         <path id="user_1_" data-name="user (1)" d="M24.863,4.266a14.565,14.565,0,0,0-20.6,20.6,14.565,14.565,0,0,0,20.6-20.6ZM6.321,24.424a8.333,8.333,0,0,1,8.244-7.333,8.3,8.3,0,0,1,8.244,7.333,12.831,12.831,0,0,1-16.487,0Zm8.244-9.091a4.424,4.424,0,1,1,4.424-4.424A4.429,4.429,0,0,1,14.564,15.333Zm9.713,7.648A10.033,10.033,0,0,0,18,15.987a6.13,6.13,0,1,0-6.862,0A10.024,10.024,0,0,0,4.85,22.98a12.858,12.858,0,1,1,19.427,0Zm0,0" transform="translate(0)" fill="#000000"/>
                                       </svg>
                                 </span>
                                 <span class="mt-0">Sign In</span>
-                            </div>
-                            <div class="cart-wrapper">
+                            </div> -->
+                            <div class="cart-wrapper header-btn">
                                 <span class="card-icon d-flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="27.272" height="25.49" viewBox="0 0 27.272 25.49">
                                         <g id="online-shopping" transform="translate(0.199 0.153)">
@@ -92,9 +123,9 @@
                                       </svg>                               
                                 </span>
                             </div>
-                            <div class="btn-wrapper">
-                                <a href="#" class="btn btn--primary">
-                                    <span class="">Buy simpleSwitch</span>
+                            <div class="btn-wrapper header-btn">
+                                <a href="./product.html" class="btn btn--primary">
+                                    <span class="">Power up with simpleSwitch</span>
                                 </a>
                             </div>
                         </div>
@@ -109,11 +140,9 @@
                         <!-- Hamburger end -->  
                     </div>
 
-
                 </div>
             </div>
         </div>
-        <!-- <div class="divider divider--grey"></div> -->
         <!-- Desktop Menu End -->
 
 
@@ -142,14 +171,39 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./shop.html" class="mobile-menu__link">
+                                <a href="./products.html" class="mobile-menu__link">
                                     <span>Shop</span>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="./what-is-simpleSwitch.html" class="mobile-menu__link">
-                                    <span>What is simpleSwitch</span>
+                                    <span class="tt-initial">What is simpleSwitch</span>
                                 </a>
+                            </li> -->
+                            <li class="mobile-submenu">
+                                <div class="submenu-service-link">
+                                    <a class="mobile-menu__link">
+                                        <span>Applications</span>
+                                    </a>
+                                    <span class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 15.997 9.878">
+                                            <path data-name="Icon material-navigate-next" d="M1.88 0 0 1.88 6.106 8 0 14.118 1.88 16l8-8z" transform="rotate(90 7.998 7.999)" fill="#fff"/>
+                                        </svg>  
+                                    </span>
+                                </div>
+                           
+                                <!-- Services Submenu -->
+                                <ul class="subMenu__list--mobile list-none">
+                                    <li>
+                                        <a href="./applications/ev-charging.html" class="subMenu__link">EV Charging</a>
+                                    </li>
+                                    <li>
+                                        <a href="./applications/multi-family.html" class="subMenu__link">Multi Family</a>
+                                    </li>                                         
+                                    <li>
+                                        <a href="./applications/heavy-appliances.html" class="subMenu__link">Heavy Appliances</a>
+                                    </li>  
+                                </ul>
                             </li>
                             <li>
                                 <a href="./contact.html" class="mobile-menu__link">
@@ -167,7 +221,9 @@
                                     </div>
                                     <ul class="footer__list list-none overflow-wrapper">
                                         <li class="footer__list-item">
-                                            <a href="mailto:info@smartfit.fitness" class="footer__link" target="_blank">info@simpleSwitch.com</a>
+                                            <a href="mailto:info@smartfit.fitness" class="footer__link" target="_blank">
+                                                <span class="tt-initial">info@simpleSwitch.com</span>
+                                            </a>
                                         </li>
                                         <li class="footer__list-item">
                                             <a href="tel:550-902-1355" class="footer__link" target="_blank">550-902-1355</a>
@@ -220,21 +276,26 @@
     <!-- Main Start -->
     <main class="main">
         <!-- Hero Section Start -->
-        <section class="hero pt--4 pt--md--6 pt--lg--8 pt--xxl--10">
+        <section class="hero pt--3 pt--sm--4 pt--md--6 pt--lg--8">
             <div class="page-container">
-                <div class="hero__header">
-                    <h1 class="hero__title">
-                        About The Company
-                    </h1>
-                    <div class="overflow-wrapper">
-                        <p class="hero__subTitle mt-2">
-                            A revolutionary power management device designed to maximize electricity use without costly panel upgrades.
-                        </p>
+                <div class="row">
+                    <div class="col-sm-10 col-md-8 col-lg-7 col-xxl-6  mx-auto">
+                        <div class="hero__header">
+                            <h1 class="hero__title">
+                                Your Partner in Smart Energy Management
+                                <span class="bg-strip bg-strip--about"></span>
+                            </h1>
+                            <div class="overflow-wrapper">
+                                <p class="hero__subTitle mt-2 px--xl--4">
+                                    simpleSwitch is dedicated to making power management accessible, efficient, and sustainable for everyone—one switch at a time.  
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero__banner mt--2 mt--sm--3 mt--md--4 mt--lg--5">
-                <figure class="fade-in">
+            <div class="hero__banner mt--2 mt--md--3 mt--lg--4 overflow-wrapper">
+                <figure class="fade-in-up img-reveal">
                     <img src="./assets/images/about/about-banner.png" alt="" class="img-fluid" loading="lazy">
                 </figure>
             </div>
@@ -245,12 +306,15 @@
          <section class="solution mt--4 mt--md--6 mt--lg--8 mt--xxl--10">
             <div class="page-container">
                 <div class="row">
-                    <div class="col-lg-6 col-xl-5 mx-auto">
+                    <div class="col-sm-10 col-md-8 col-lg-7 col-xl-6 mx-auto">
                         <div class="section-header">
-                            <h2 class="section-title fade-in px--xl--4">Empowering Smart Energy Solutions</h2>
+                            <h2 class="section-title fade-in px--2 px--xl--4">Our Story</h2>
                             <div class="overflow-wrapper">
-                                <p class="fade-in-up mt-2 section-subTitl">
-                                    simpleSwitch intelligently balances power between appliances and EV chargers, ensuring energy efficiency without overloading your panel. Whether you're a homeowner or managing multiple properties, simpleSwitch offers seamless integration of new devices with your existing electrical system.
+                                <p class=" mt-2 fade-in-up">
+                                    simpleSwitch was founded with a single vision: to bridge the gap between innovative technology and practical energy solutions for everyday use. use.                                                          
+                                </p>
+                                <p class=" mt-4 fade-in-up">
+                                    Seeing the need for a cost-effective way to manage electrical loads in homes and commercial spaces, we developed a device that combines efficiency with ease of Today, our products are trusted by electricians, property owners, and energy-conscious individuals who want to make the most of their existing infrastructure.
                                 </p>
                             </div>
                         </div>
@@ -260,23 +324,25 @@
 
             <div class="our-mission mt--3 mt--md--6 mt--lg--8 bg--primary bg-colored">
                 <div class="row">
-                    <div class="col-sm-6 col-md-7 col-lg-7 col-xl-7">
-                        <figure class="fade-in">
+                    <div class="col-sm-6 col-md-7 col-lg-7 col-xl-7 overflow-wrapper">
+                        <figure class="fade-in-up">
                             <img src="./assets/images/about/img-1.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                     </div>
                     <div class="col-sm-6 col-md-5 col-lg-5 col-xl-5 mt--3 mt-sm-0">
-                        <div class="our-mission__wrapper">
-                            <figure class="fade-in">
+                        <div class="our-mission__wrapper txt-center">
+                            <!-- <figure class="fade-in">
                                 <img src="./assets/images/quotes.png" alt="" class="img-fluid" loading="lazy">
-                            </figure>
-                            <div class="our-mission__content mt--2 mt--sm--4">
-                                <h3 class="fade-in mt-4">
-                                    <q>Our mission drives us to design, build, and deploy products that electrify.</q>
-                                </h3>
+                            </figure> -->
+                            <div class="our-mission__content mt--1 mt--sm--2 mt--md--3 mt--lg--4 overflow-wrapper">
+                                <h3 class="fade-in-up mt-4">Our Mission</h3>
                                 <div class="overflow-wrapper">
-                                    <p class="mt--2 fade-in-up">Jytte</p>
-                                    <p class="fade-in-up mt-1">Owner simpleSwitch</p>
+                                    <p class="mt--1 fade-in-up">
+                                        At simpleSwitch, our mission is to make energy management accessible and effective for everyone, from homeowners to large property managers. We believe that maximizing electrical capacity shouldn’t require expensive panel upgrades or complex installations.                                     
+                                        </p>
+                                    <p class="fade-in-up mt-4"> 
+                                        That’s why we created simpleSwitch to empower you with smarter, automatic power-sharing solutions that reduce costs and expand possibilities.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -286,80 +352,82 @@
         </section>
         <!-- Energy Solution Section End -->
         
-
         <!-- Our Vision Section Start -->
-        <div class="our-vision bg-colored pt--4 pt--sm--6 pt--md--8 pb--10 pb--sm--12 pb--md--14 pb--xl--16">
+        <div class="our-vision bg-colored py--4 py--sm--6 py--lg--6 py--xl--8 ">
             <div class="page-container">
                 <div class="row">
                     <div class="col-lg-6 col-xl-5 mx-auto">
                         <div class="section-header">
-                            <h2 class="section-title fade-in px--xl--4 px--xxl--8">Our Vision For Smarter Homes</h2>
-                            <div class="overflow-wrapper">
-                                <p class="fade-in-up mt-2 section-subTitl">
-                                    At simpleSwitch, we aim to make energy management intuitive, efficient, and accessible. We believe in designing smart products that help you save energy, lower costs, and future-proof your home’s power system.
-                                </p>
-                            </div>
+                            <h2 class="section-title fade-in px--xl--4 px--xxl--8">Why Choose <span class="tt-initial">simpleSwitch</span>?</h2>
                         </div>
                     </div>
                 </div>
     
-                <div class="row mt--4 mt--sm--6 mt--lg--8">
-                    <div class="col-sm-6 col-md-4">
+                <div class="row mt--3 mt--sm--5 mt--lg--6">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mx-auto-center">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash.png" alt="" class="img-fluid mx-auto" loading="lazy">
+                            <img src="./assets/icons/about/icon-1.svg" alt="" class="img-fluid mx-auto" loading="lazy">
                         </figure>
                         <h3 class="fade-in-up mt--1">
-                            In Making Home Energy Intuitive
+                            Ease of Use
                         </h3>
                         <div class="overflow-wrapper">
-                            <p class="mt-2 fade-in-up">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                            <p class="mt-2 fade-in-up px--xl--2 px--xxl--4">
+                                Our devices are designed for quick, hassle-free installation, making it easy to enhance electrical capacity in any setting.
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 mt--3 mt-sm-0">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt--3 mt-sm-0 mx-auto-center">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash.png" alt="" class="img-fluid mx-auto" loading="lazy">
+                            <img src="./assets/icons/about/icon-2.svg" alt="" class="img-fluid mx-auto" loading="lazy">
                         </figure>
                         <h3 class="fade-in-up mt--1">
-                            In Making Home Energy Intuitive
+                            Cost-Effective Solution
                         </h3>
                         <div class="overflow-wrapper">
-                            <p class="mt-2 fade-in-up">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                            <p class="mt-2 fade-in-up px--xl--2 px--xxl--4">
+                               simpleSwitch saves you the expense of panel upgrades, maximizing the value of your existing electrical infrastructure.
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 mt--3 mt-md-0">
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt--3 mt-md-0 mx-auto-center">
                         <figure class="fade-in">
-                            <img src="./assets/images/flash.png" alt="" class="img-fluid mx-auto" loading="lazy">
+                            <img src="./assets/icons/about/icon-3.svg" alt="" class="img-fluid mx-auto" loading="lazy">
                         </figure>
                         <h3 class="fade-in-up mt--1">
-                            In Making Home Energy Intuitive
+                            Reliable Performance
                         </h3>
                         <div class="overflow-wrapper">
-                            <p class="mt-2 fade-in-up">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                            <p class="mt-2 fade-in-up px--xl--2 px--xxl--4">
+                                With UL certification and rigorous quality control, our products are built to last and perform under real-world conditions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt--3 mt-lg-0 mx-auto-center">
+                        <figure class="fade-in">
+                            <img src="./assets/icons/about/icon-4.svg" alt="" class="img-fluid mx-auto" loading="lazy">
+                        </figure>
+                        <h3 class="fade-in-up mt--1">
+                            Environmental Impact
+                        </h3>
+                        <div class="overflow-wrapper">
+                            <p class="mt-2 fade-in-up px--xl--2 px--xxl--4">
+                                By optimizing power use, simpleSwitch contributes to reducing unnecessary energy consumption and supports sustainable energy practices.
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="custom-shape-divider-bottom-1729077812">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
-                </svg>
             </div>
         </div>
         <!-- Our Vision Section End -->
 
         <!-- People Powering Section Start -->
-         <section class="powering mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
+         <!-- <section class="powering mt--6 mt--md--8 mt--lg--10 mt--xxl--12 overflow-wrapper">
             <div class="page-container">
                 <div class="row">
                     <div class="col-sm-10 col-md-8 col-lg-8 col-xl-6 mx-auto">
                         <div class="section-header">
-                            <h2 class="section-title fade-in px--xl--4">The People Powering Simpleswitch</h2>
+                            <h2 class="section-title fade-in px--xl--4">The People Powering <span class="tt-initial">simpleSwitch</span></h2>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up mt-2 section-subTitl">
                                     Our team of engineers and innovators are passionate about changing the way we use electricity. We strive to create smart, sustainable energy solutions that improve everyday life.
@@ -369,20 +437,12 @@
                     </div>
                 </div>
             </div>
-            <figure class="fade-in-up mt--4 mt--sm--6 mt--md--8">
-                <img src="./assets/images/about/img-2.png" alt="" class="img-fluid" loading="lazy">
-            </figure>
-        </section>
+            <div class="powering--about-banner mt--3 mt--sm--4 mt--md--5 mt--md--6 mt--lg--8 img-reveal"></div>
+        </section> -->
         <!-- People Powering Section End -->
 
-
         <!-- Join Team Section Start -->
-        <section class="join-team py--6 py--lg--10">
-            <!-- <div class="custom-shape-divider-top">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z" class="shape-fill"></path>
-                </svg>
-            </div> -->
+        <!-- <section class="join-team py--3 py--md--4 py--lg--6">
             <div class="page-container">
                 <div class="row">
                     <div class="col-sm-10 col-md-8 col-lg-8 col-xl-6 mx-auto">
@@ -404,38 +464,35 @@
                     </div>
                 </div>
             </div>
-            <div class="custom-shape-divider-bottom">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
-                </svg>
-            </div>
-        </section>
+        </section> -->
         <!-- Join Team Section End -->
         
-
         <!-- Customizable Section Start -->
          <Section class="customizable mt--6 mt--md--8 mt--lg--10 mt--xxl--12">
             <div class="page-container page-container--ml">
-                <div class="row align-items-center mb--3 mb-lg-0">
+                <div class="row align-items-center">
                     <div class="col-sm-10 col-lg-6 col-xl-5 col-xxl-6 order-2 order-lg-0 mt--2 mb--4 mb-xl-0 mt-lg-0">
                         <div class="section-header mx-auto-left">
                             <h2 class="fade-in">
-                                We Offer Customized Units For Larger Panels Up To 600 Amps.
+                                Join Us on the Path to Smarter Power Management
                             </h2>
                             <div class="overflow-wrapper">
                                 <p class="fade-in-up section-p mt--1">
-                                    Start Saving Time and Money with the Easiest Load Management Solution on the Market.
+                                    Whether you’re an electrician, a property owner, or simply someone looking to make a smarter energy choice, we invite you to explore what simpleSwitch can do for you. Together, let’s power a future where efficiency, sustainability, and affordability go hand in hand.
+
                                 </p>
                             </div>
                             <div class="btn-wrapper mt--2">
-                                <a href="#" class="btn btn--primary">
-                                    Buy simpleSwitch
-                                </a>
+                                <div class="fade-in-up">
+                                    <a href="./product.html" class="btn btn--primary">
+                                       <span class="">Power up with simpleSwitch</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-5 offset-xl-1">
-                        <figure class="fade-in">
+                    <div class="col-lg-6 col-xxl-5 offset-xl-1 overflow-wrapper">
+                        <figure class="fade-in-up">
                             <img src="./assets/images/ev-charging-car-vehicle-wheel.png" alt="" class="img-fluid" loading="lazy">
                         </figure>
                     </div>
@@ -444,9 +501,8 @@
          </Section>
         <!-- Customizable Section End -->
 
-
         <!-- CTA Section Start -->
-         <section class="cta py--4 py--md--6 py--xl--10 bg--primary bg-colored">
+        <section class="cta py--4 py--md--6 py--xl--10 bg--primary bg-colored">
             <div class="page-container">
                 <div class="row">
                     <div class="col-sm-10 col-lg-8 mx-auto-center">
@@ -460,12 +516,10 @@
                                         <div class="form__group footer-form-group">
                                             <input type="email" id="email" name="email" placeholder="" class="form__control footer-form-control" autocomplete="off"  required>
                                             <label for="name" class="form__label">Email Address</label>
-                                        </div>
-                                        <button class="btn btn--primary" id="cta-submit-btn">
-                                            <span>Submit</span>
-                                        </button>
+                                        </div>                      
+                                        <input class="btn btn--submit" value="Submit" type="submit">
                                     </div>
-                                    <small class="mt-2 fade-in-up ff-14"><em>*Get Early Access To Offers And Discount Coupons</em></small>
+                                    <!-- <small class="mt-2 fade-in-up ff-14"><em>*Get Early Access To Offers And Discount Coupons</em></small> -->
                                 </form>
                             </div>
                         </div>
@@ -474,7 +528,6 @@
             </div>
          </section>
         <!-- CTA Section End -->
-
 
     </main>
     <!-- Main End -->
@@ -485,14 +538,14 @@
             <div class="page-container">
                 <div class="divider divider--white"></div>
                 <div class="row py--3 py--md--4 py--lg--5 py--xxl--6">
-                    <div class="col-lg-12 col-xl-4">
+                    <div class="col-lg-12 col-xl-3">
                         <a href="./index.html" class="fade-in d-inline-flex">
                             <img src="./assets/logos/logo-2.svg" alt="SmartFit's logo" class="img-fluid footer-logo" loading="lazy">
                         </a>
                     </div>
-                    <div class="col-md-8 col-lg-6 col-xl-4 mt--2 mt--md--3 mt-xl-0">
-                        <div class="row">
-                            <div class="col-sm-11">
+                    <div class="col-sm-11 col-md-8 col-lg-6 col-xl-5 mt--2 mt--md--3 mt-xl-0">
+                        <div class="row ml--xl--1">
+                            <div class="col-5 col-sm-12">
                                 <ul class="footer__list list-none overflow-wrapper">
                                     <li class="fade-in-up">
                                         <a href="./index.html" class="footer__link ">
@@ -505,76 +558,69 @@
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./faqs.html" class="footer__link ">
-                                            <span>FAQs</span>
+                                        <a href="./contact.html" class="footer__link ">
+                                            <span>Contact</span>
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./simpleSwitch.html" class="footer__link ">
-                                           <span>simpleSwitch</span>
+                                        <a href="./contact.html" class="footer__link ">
+                                           <span>Buy <span class="tt-initial">simpleSwitch</span></span>
                                         </a>
                                     </li>                       
                                 </ul>
                             </div>
-                            <div class="col-sm-11 mt--1 mt--md--1">
+                            <div class="col-7 col-sm-12 mt--sm--1">
                                 <ul class="footer__list list-none overflow-wrapper">
                                     <li class="fade-in-up">
-                                        <a href="./warranty.html" class="footer__link">
-                                            <span>Warranty</span>
+                                        <a href="./applications/ev-charging.html" class="footer__link">
+                                            <span>EV Charger</span>
                                         </a>
                                     </li>
                                     <li class="fade-in-up">
-                                        <a href="./terms.html" class="footer__link">
-                                            <span>Terms</span>
+                                        <a href="./applications/multi-family.html" class="footer__link">
+                                            <span>Multi Family</span>
                                         </a>
-                                    </li>                         
+                                    </li>
                                     <li class="fade-in-up">
-                                        <a href="./return-policy.html" class="footer__link">
-                                            <span>Return policy</span>
+                                        <a href="./applications/heavy-appliances.html" class="footer__link">
+                                            <span>Heavy Appliances</span>
                                         </a>
-                                    </li>                         
+                                    </li>                       
                                     <li class="fade-in-up">
-                                        <a href="./sitemap.html" class="footer__link">
-                                            <span>Sitemap</span>
+                                        <a href="./products.html" class="footer__link">
+                                            <span>Products</span>
                                         </a>
                                     </li>                         
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4 mt--1 mt--sm--2 mt--md--3 mt-xl-0">
+                    <div class="col-lg-6 col-xl-4 mt--2 mt--md--3 mt-xl-0">
                         <ul class="footer__list-right list-none overflow-wrapper">
                             <li class="fade-in-up">
                                 <span class=""><em>Call Us</em></span>
-                                <a href="tel:550-902-1355" class="footer__link" target="_blank">550-902-1355</a>
+                                <a href="tel:550-902-1355" class="footer__link" target="_blank">
+                                    <span>550-902-1355</span>
+                                </a>
                             </li>
                             <li class="fade-in-up">
                                 <span class=""><em>Locate</em></span>
                                 <a href="#" class="footer__link ml--0" target="_blank">
-                                   <address class="d-inline-flex">420 N Cleveland St, Memphis, TN, US</address>
+                                   <address class="d-inline-flex">
+                                        <span>420 N Cleveland St, Memphis, TN, US</span>
+                                   </address>
                                 </a>                        
                             </li>   
                             <li class="fade-in-up">
                                 <span class=""><em>Email</em></span>
-                                <a href="mailto:info@simpleswitch.com" class="footer__link link-last" target="_blank">info@simpleswitch.com</a>
+                                <a href="mailto:info@simpleSwitch.com" class="footer__link link-last" target="_blank">
+                                    <span class="tt-initial">info@simpleSwitch.com</span>
+                                </a>
                             </li>                                                                                          
                         </ul>
                     </div>
-                </div>
-                <div class="divider divider--white"></div>
-            </div>
-        </div>   
 
-        <div class="footer__bottom py--2 py--md--3">
-            <div class="page-container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-xl-6 col-xxl-6 order-2 order-lg-0 mt-4 mt-lg-3 reserved-info-wrapper">
-                        <small class="fade-in-up txt-white mt-0">&copy;2024 B&B Technology Inc. All rights reserved.</small> 
-                        <small class="fade-in-up txt-white mt-0 designed-by-text">
-                            <span class="">Designed By</span> <a href="https://www.yourhustler.com/" class="footer__link">YourHustler</a>
-                        </small>                                        
-                    </div>
-                    <div class="col-lg-6 col-xl-5 offset-xl-1 col-xxl-4 offset-xxl-2 footer__bottom-right">
+                    <div class="col-12 mt--2 footer__top-bottom">
                         <div class="app-stores">
                             <figure class="fade-in">
                                 <img src="./assets/images/ul.png" alt="" class="img-fluid" loading="lazy">
@@ -583,9 +629,9 @@
                                 <img src="./assets/images/DIN-logo.png" alt="" class="img-fluid" loading="lazy">
                             </figure>
                         </div>
-                        <ul class="socials-list list-none">
+                        <ul class="socials-list list-none fade-in-up">
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.facebook.com/smartfit" class="socials-link">
+                                <a href="https://www.facebook.com/simpleSwitch" class="socials-link" target="_blank">
                                    <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="18" height="18">
                                             <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" fill="#0832FF"/>
@@ -594,7 +640,7 @@
                                 </a>
                             </li>
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.instagram.com/smartfit" class="socials-link">
+                                <a href="https://www.instagram.com/simpleSwitch" class="socials-link" target="_blank">
                                     <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18">
                                             <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="#0832FF" />
@@ -603,7 +649,7 @@
                                 </a>
                             </li>
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.youtube.com/smartfit" class="socials-link">
+                                <a href="https://www.youtube.com/simpleSwitch" class="socials-link" target="_blank">
                                    <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18">
                                             <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" fill="#0832FF"/>
@@ -612,7 +658,7 @@
                                 </a>
                             </li>
                             <li class="socials-item fade-in-up">
-                                <a href="https://www.linkedin.com/smartfit" class="socials-link">
+                                <a href="https://www.linkedin.com/simpleSwitch" class="socials-link" target="_blank">
                                    <span class="d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.415 18.414">
                                             <path data-name="Icon awesome-linkedin-in" d="M4.122 18.415H.3V6.121h3.822zM2.211 4.444a2.221 2.221 0 1 1 2.211-2.232 2.23 2.23 0 0 1-2.211 2.232zm16.2 13.971H14.6V12.43c0-1.426-.029-3.255-1.985-3.255-1.985 0-2.289 1.55-2.289 3.153v6.087H6.513V6.121h3.662V7.8h.053a4.012 4.012 0 0 1 3.612-1.985c3.864 0 4.574 2.544 4.574 5.849v6.753z" transform="translate(0 -.001)" fill="#0832FF"/>
@@ -622,6 +668,35 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="divider divider--white"></div>
+            </div>
+        </div>   
+
+        <div class="footer__bottom py--2 py--md--3">
+            <div class="page-container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-xl-6 order-2 order-lg-0 mt-2 mt-lg-0 reserved-info-wrapper">
+                        <small class="fade-in-up txt-white mt-0">&copy;2024 B&B Technology Inc. All rights reserved.</small> 
+                        <small class="fade-in-up txt-white mt-0 designed-by-text">
+                            <span class="">Designed By</span> <a href="https://www.yourhustler.com/" class="footer__link" target="_blank"><span>YourHustler</span></a>
+                        </small>                                        
+                    </div>
+                    <div class="col-lg-4 col-xl-6">
+                        <ul class="footer__list footer__list--bottom list-none overflow-wrapper">
+                            <li class="fade-in-up">
+                                <a href="./terms-and-conditions.html" class="footer__link">
+                                    <span>Terms & Conditions</span>
+                                </a>
+                            </li>                         
+                            <li class="fade-in-up">
+                                <a href="./return-policy.html" class="footer__link">
+                                    <span>Return policy</span>
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>                
                 </div>
             </div>
         </div>

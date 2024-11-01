@@ -9,42 +9,45 @@
 .accordion{
     &__container{
         display: flex;
-        padding-block: em(24);
-        gap:rem(6);
+        padding-block: em(20);
+        gap:rem(20);
         @include breakpoint-sm{
-            padding-block: em(32);
-            gap:rem(10);
+            padding-block: em(24);
+            gap:rem(24);
         }
         @include breakpoint-md{
+            padding-block: em(28);
             padding-right: 1rem;
-            gap:1rem(16);
+            gap:rem(32);
         }
-        @include breakpoint-md{
-            padding-right: 2rem;
+        @include breakpoint-xl{
+            padding-block: em(32);
+            gap:rem(48);
         }
+        @include breakpoint-xxl{
+            padding-block: em(36);
+            gap:rem(48);
+        }
+    }
+    &__fig{
+        flex-shrink: 0;
     }
     &__title-wrapper{
         position: relative;
         display: flex;
         &::after{
-            content: url("../assets/icons/arrow-down.svg");
+            content: url("../assets/icons/chevron-down.svg");
             position: absolute;
             flex-shrink: 0;
             right: 0;
             transition:transform 0.25s ease;
             transform: translateY(0) rotate(0deg);
             transform-origin: center;
-            @include dimensions(rem(42), rem(26));
-            background: $clr-secondary;
-            @include flex-center;
         }
     }
     &__title{
         position: relative;
-        display: flex;
-        align-items: center;
         text-transform: capitalize;
-        gap:rem(16);
         @include transition(all, 0.25s, ease);
         max-width: 85%;
         @include link-hover-effect($clr-black, $clr-secondary);
@@ -55,6 +58,9 @@
             @include transition(all, 0.25s, ease);
         }
     }
+    &__content-wrapper{
+        width: 100%;
+    }
     &__content{
         position: relative;
         overflow: hidden;
@@ -63,6 +69,7 @@
         max-width: min(100%, 84ch);
         text-align: left;
     }
+
 }
 
 
@@ -92,22 +99,22 @@
     }
 }
 
-.faqs-title-wrapper{
-    background-color: $clr-tertiary;
-    padding: em(16) em(24);
-    align-items: center;
-    &::after{
-        right: rem(24);
-    }
-    .accordion__title{
-        @include link-hover-effect($clr-white, $clr-secondary);
-    }
-    & + .accordion__content{
-        padding-left: em(24);
-    }
-}
+// .faqs-title-wrapper{
+//     background-color: $clr-tertiary;
+//     padding: em(16) em(24);
+//     align-items: center;
+//     &::after{
+//         right: rem(24);
+//     }
+//     .accordion__title{
+//         @include link-hover-effect($clr-white, $clr-secondary);
+//     }
+//     & + .accordion__content{
+//         padding-left: em(24);
+//     }
+// }
 
-.faqs-section-header{
-    max-width: 76ch;
-    margin-inline: auto;
-}
+// .faqs-section-header{
+//     max-width: 76ch;
+//     margin-inline: auto;
+// }

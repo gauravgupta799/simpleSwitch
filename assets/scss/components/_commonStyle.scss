@@ -14,17 +14,6 @@
 }
 
 
-// .section-header{
-//     max-width: 72ch;
-//     margin-inline:auto;
-//     &--about{
-//         max-width: 80ch;
-//         @include breakpoint-xxl{
-//             max-width:91ch;
-//         }
-//     }
-// }
-
 .section-p{
     max-width: 100%;
     max-width: 35rem;
@@ -36,20 +25,20 @@
     // }
 }
 
-.section-center-div{
-    display: flex;
-    flex-wrap: wrap;
-    @include breakpoint-sm{
-        gap: rem(16);
-    }
-    @include breakpoint-lg{
-        gap: rem(20);
-        flex-wrap: nowrap;
-    }
-    @include breakpoint-xxl{
-        align-items: center;
-    }
-}
+// .section-center-div{
+//     display: flex;
+//     flex-wrap: wrap;
+//     @include breakpoint-sm{
+//         gap: rem(16);
+//     }
+//     @include breakpoint-lg{
+//         gap: rem(20);
+//         flex-wrap: nowrap;
+//     }
+//     @include breakpoint-xxl{
+//         align-items: center;
+//     }
+// }
 
 .overlay{
     position: fixed;
@@ -68,5 +57,24 @@
     &.active{
         opacity: 1;
         visibility: visible;
+    }
+}
+
+.grid{
+    &--compatibility{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        @include breakpoint-sm{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-lg{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include breakpoint-xl{
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include breakpoint-xxl{
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
 }

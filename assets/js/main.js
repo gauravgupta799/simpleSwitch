@@ -92,15 +92,34 @@ window.onload = function(){
     })
     .from(".header-btn", {
         y:20,
-        delay:-1.25,
+        delay:-1.2,
     })
     .from(".hero__title", {
         y:50,
         delay:-1.3,
     })
+    .fromTo(".bg-strip", 
+        { 
+            y:80,
+            opacity:0,
+        },
+        {
+            opacity:1,
+            y:0,
+            duration:1.5,
+            delay:-1.2,
+        }
+    )
     .from(".hero__subTitle", {
         y:50,
         delay:-1.35,
+    })
+    .from(".hero__banner", {
+        y:-50,
+        duration:1.2,
+        delay:-1.4,
+        scale:1.4,
+        ease:"power3.out"
     })
     const heroBtn = document.querySelectorAll(".hero-btn");
     if(heroBtn){
@@ -111,6 +130,7 @@ window.onload = function(){
             delay:-1.4,
         });
     }
+    
 }
 // ----=== Loader End ----=========
 
@@ -121,7 +141,6 @@ const navLinks = document.querySelectorAll(".nav__link");
 const mobileNavLinks = document.querySelectorAll(".mobile-menu__link");
 
 function activeLink(link) {
-    // const linkPathname = new URL(link.href).pathname;
     const linkPathname = new URL(link.href, window.location.origin).pathname;
     if((windowPathname === linkPathname) || (windowPathname === "./index.html" && linkPathname === "/")){
         link.classList.add("active");
@@ -219,64 +238,47 @@ var swiper1 = new Swiper(".swiper-testimonials", {
         },
         992:{
             slidesPerView:3,
-            // spaceBetween:30,
+            spaceBetween:15,
         },
     }
 });
 
-// const stayConntected = new Swiper(".stay-connected-swiper", {
-//     slidesPerView: 1,
-//     loop:true,
-//     grabCursor:true,
-//     spaceBetween:20,
-//     breakpoints:{
-//         768:{
-//             slidesPerView:3
-//         },
-//         1024:{
-//             slidesPerView:3
-//         },
-//         1200:{
-//             slidesPerView:4
-//         }
-//     }
-// })
 // ============ Swipers End =================
 
 
 
 // ========== Counter script start ============
-// const counterSections = document.querySelectorAll(".counter-section");
-// counterSections && counterSections.forEach((counterSection)=>{
-//     const counters = counterSection.querySelectorAll(".count-value");
-//     if(counters.length > 0) {
-//         let CounterObserver = new IntersectionObserver(
-//             (entries, observer)=>{
-//                 let [entry] = entries;
-//                 if(!entry.isIntersecting) return;
+const counterSections = document.querySelectorAll(".counter-section");
+counterSections && counterSections.forEach((counterSection)=>{
+    const counters = counterSection.querySelectorAll(".count-value");
+    if(counters.length > 0) {
+        let CounterObserver = new IntersectionObserver(
+            (entries, observer)=>{
+                let [entry] = entries;
+                if(!entry.isIntersecting) return;
         
-//                 let speed = 200;
-//                 counters.forEach((counter, index) => {
-//                     const updateCounter = () =>{
-//                         let targetNumber = +counter.dataset.target;
-//                         let initialNumber = +counter.innerText;
-//                         let incPerCount = targetNumber / speed;
-//                         if(initialNumber  < targetNumber ){
-//                             counter.innerText = Math.ceil(initialNumber + incPerCount);
-//                             setTimeout(updateCounter, 40);
-//                         }
-//                     }
-//                     updateCounter();
-//                 })
-//                 observer.unobserve(counterSection);
-//             },{
-//                 root:null,
-//                 threshold:0.4,
-//             }
-//         );
-//         CounterObserver.observe(counterSection);
-//     }
-// })
+                let speed = 200;
+                counters.forEach((counter, index) => {
+                    const updateCounter = () =>{
+                        let targetNumber = +counter.dataset.target;
+                        let initialNumber = +counter.innerText;
+                        let incPerCount = targetNumber / speed;
+                        if(initialNumber  < targetNumber ){
+                            counter.innerText = Math.ceil(initialNumber + incPerCount);
+                            setTimeout(updateCounter, 40);
+                        }
+                    }
+                    updateCounter();
+                })
+                observer.unobserve(counterSection);
+            },{
+                root:null,
+                threshold:0.4,
+            }
+        );
+        CounterObserver.observe(counterSection);
+    }
+})
 // ============ Counter script end ============
 
 //========== Video Play /Pause Button Start ============
@@ -309,6 +311,21 @@ if(playBtns){
   });
 }
 //========== Video Play /Pause Button End ============
+
+// Tabs start
+// Tabs end
+const tabBtns = document.querySelectorAll(".tab__btn");
+
+tabBtns && tabBtns.forEach((tabBtn, index) => {
+    tabBtn.addEventListener("click",function(e){
+        tabBtns.forEach((tabBtn) => tabBtn.classList.remove("active"));
+        tabBtn.classList.add("active");
+        const tabContent = document.querySelectorAll(".tab__content");
+        tabContent.forEach((tabContent) => tabContent.classList.remove("active"));
+        tabContent[index].classList.add("active");
+    })
+})
+
 
 // ========= Animation Starts =========
 //----- animation fade in ------ 
@@ -351,17 +368,17 @@ fadeInUp.forEach((item, i) => {
 const imgReveal = gsap.utils.toArray(".img-reveal");
 imgReveal.forEach((item, i) => {
     const anim = gsap.fromTo(item,
-        { opacity: 0, scale:1.4, rotation:15},
-        { opacity: 1, scale:1, rotation:0, duration: 1.2, }
+        { opacity: 0, scale:1.4,},
+        { opacity: 1, scale:1, duration: 1.25, }
     );
     ScrollTrigger.create({
         trigger: item,
         animation: anim,
         toggleActions: "play",
         once: true,
-        duration: 1.2,
+        duration: 1.25,
         stagger:0.1,
-        ease: "power3.out"
+        ease: "power3.in"
     });
 });
 

@@ -13,31 +13,79 @@
     border:none;
     color:$clr-black;
     font-family: $ff-secondary;
-    font-size:rem(20);
+    font-size:rem(16);
     line-height: 1.2;
     padding:em(14) em(28);
-    @include border-radius(16px);
+    @include border-radius(24px);
     @include transition(all, 0.3s, ease);
     z-index: 1;
+    @include breakpoint-md{
+        font-size:rem(18);
+    }
    
     span{
         color:$clr-black;
+        transition: color 0.3s ease;
     }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom:0;
+        @include full-dimensions;
+        @include border-radius(20px);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in;
+        z-index: -1;
+    }
+
     &:hover{
         cursor: pointer;
+        &::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    &--submit{
+        border: none;
+        border-radius: 0 24px 24px 0;
+        font-family: $ff-secondary;
+        outline: 2px solid $clr-black;
+        outline-offset: -2px;
+        background:$clr-secondary;
+        @include transition(all, 0.3s, ease);
+        &::before{
+            background-color: $clr-white;
+        }
+        &:hover{
+            background-color: $clr-white;
+            &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
     }
 }
 
 
 .btn--primary{
+    @include flex-center;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     background: $clr-secondary;
     border: 2px solid $clr-black;
+    @include transition(all, 0.3s, ease);
     gap:rem(16);
-    span{
-        color:$clr-black;
+    &::before{
+        border: 2px solid $clr-primary;
+        background-color: $clr-primary;
+    }
+    &:hover{
+        span{
+            color:$clr-white;
+        }
     }
 }
 
@@ -50,7 +98,8 @@
         color:$clr-black;
     }
     &:hover{
-        border-color:$clr-secondary;
+        // background-color: $clr-secondary;
+        // border-color:$clr-secondary;
         span{
             color:$clr-white;
         }
@@ -66,15 +115,11 @@
     padding: 0;
 
     span{
-        color:$clr-secondary;
-        text-decoration: underline;
-        text-decoration-color: $clr-secondary;        
-        -moz-text-decoration-color: $clr-secondary;    
+        color:$clr-secondary;  
     }
     &:hover{
         span{
-            color:$clr-black;
-            text-decoration-color: $clr-black;    
+            color:$clr-black;   
         }
     }
 }
@@ -95,42 +140,6 @@
 //     }
 // }
 
-// .btn--prev,
-// .btn--next{
-//     position: relative;
-//     @include border-radius(50%);
-//     @include flex-center;
-//     padding: em(8);
-//     flex-shrink: 0;
-//     z-index:2;
-   
-//     @include breakpoint-sm{
-//         padding: em(10);
-//         top: -3rem;
-//     }
-//     @include breakpoint-md{
-//         padding: em(12);
-//     }
-//     @include breakpoint-lg{
-//         padding: em(14);
-//     }
-//     @include breakpoint-xl{
-//         padding: em(16);
-//     }
-//     @include breakpoint-xxl{
-//         padding: em(18);
-//         top: 0;
-//     }
-//     @include breakpoint-xxxl{
-//         padding: em(20);
-//     }
-//     &:hover{
-//         background: $clr-secondary;
-//         svg path{
-//             fill: $clr-white;
-//         }
-//     }
-// }
 
 // ======= Play Button =======
 .play-btn-wrapper{
@@ -138,7 +147,7 @@
     right: 0;
     bottom: 0;
     margin-right: rem(32);
-    margin-bottom: rem(64);  
+    margin-bottom: rem(128);  
     text-align: center;
     @include breakpoint-sm{
         margin-right: rem(64);
@@ -191,15 +200,3 @@
         background-color: $clr-primary;
     }
 }
-
-
-// .submit-btn{
-//     @include flex-center;
-//     @include dimensions(rem(36), rem(36));
-//     background: $clr-secondary;
-//     transition:all 0.3s ease;
-//     &:hover{
-//         background: $clr-primary;
-//         @include border-radius(50%);
-//     }
-// }
